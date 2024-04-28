@@ -8,12 +8,15 @@ import Error
 import Config
 import logging
 import logging.config
+import Shop
+
 urls = (
     '/', 'hello',
     '/register', 'Register',  
     '/login', 'Login', 
     '/shop/cfg','Shop_cfg',
-    '/shop/buy', 'Shop_buy' 
+    '/shop/buy', 'Shop_buy',
+
 
 )
 
@@ -70,7 +73,7 @@ class Register:
         return json.dumps({'code':0})
 
 
-
+# 登陆
 class Login:
     @CatchError
     def POST(self):
@@ -85,4 +88,28 @@ class Login:
 
         return json.dumps({'code':0})
        
+
+class Shop_cfg:
+    @CatchError
+    def GET(self):
+        req = web.input(version = '')
+        version = int(req.version)
+        shopcfg = Shop.GetShopCfg(version)
+        return json.dumps({"code": 0, 'shopcfg':shopcfg})
+
+
+class Shop_buy:
+    @CatchError
+    def GET(self):
+        req = web.input(userid = '', propid = '', propnum = '', shopversion = '', version = '')
+        userid = req.userid
+        propid = req.propid
+        propnum = req.propnum
+        shopversion = req.shopversion
+        version = req.version
+        dictInfo = Shop.ShopBuy(userid , propid , propnum, shopversion, version)
+        return json({'code': 0})
+        
+
+
 
