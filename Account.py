@@ -113,6 +113,24 @@ def InitUser(phonenum, password, nick, sex, idcard):
     now = datetime.datetime.now()
     DBManage.InsertRegisterUser(phonenum, password, nick, sex, idcard, now)
     # 初始化用户背包
+    strKey = Config.KEY_PACKAGE.format(userid = phonenum)
+    packageinfo = {
+        'money':Config.NEWUSER_DEFAULT_MONEY,
+        'coin':0,
+        'prop_1001':0,
+        'prop_1002':0,
+        'prop_1003':0,
+        'prop_1006':0,
+        'prop_1007':0,
+        'freshtime':str(now),# 背包当前时间
+    }
+    
+    # 易于维护
+    Config.grds.hmset(strKey, packageinfo)
+    # 设置了一个 userid 
+    packageinfo['userid'] = phonenum
+    DBManage.InitPackage(packageinfo)
+
 
 # 检测用户的登录
 def VerifyAccount(userid,password):
@@ -127,12 +145,40 @@ def VerifyAccount(userid,password):
     return {"code":0}
 
 
-def HandleLogin(userid):
+def HandleLogin(userid, session):
     now = datetime.datetime.now()
+    logininfo = {
+        'freshtime':str(now),
+    }
+    # 设置登录过期时间
+    Config.grds.hmset(Config.KEY_LOGIN.format(userid=userid), logininfo)
+    Config.grds.expire(Config.KEY_LOGIN.format(userid=userid), Config.LOGIN_INVALID_TIME)
+    
     Config.gdb.update(
         "user_data",
         lastlogintime = now,
         where="userid=$userid",
         vars=dict(userid=userid)    
     )
+   
+    #session一致性
+    session['userid'] = userid
+    #法二 检测这个是否在缓存中
+    #Config.grds.hmset(Config.KEY_LOGIN,)
     return {"code":0}
+
+
+
+## 建表背包表
+# create table `package`(
+# `userid`` bigint(20) not null,
+# `money` int(4) default 0,
+# `coin` int(4) default 0,
+# `prop_1001` int(4) default 0,
+# `prop_1002` int(4) default 0,
+# `prop_1003` int(4) default 0,
+# `prop_1004` int(4) default 0,
+# `prop_1005` int(4) default 0,
+# `freshtime` datetime not null,
+# primary key (`userid`) 
+# ) engine=innodb default charset=utf8;

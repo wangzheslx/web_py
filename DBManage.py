@@ -15,3 +15,20 @@ def InsertRegisterUser(phonenum, password, nick, sex, idcard, now):
         createtime = now,
         lastlogintime = now,
     )
+
+
+def InitPackage(packageinfo):
+    Config.gdb.insert(
+        "package",
+        **packageinfo
+    )
+
+
+def UpdateMoney(userid, money, now):
+    Config.gdb.update(
+        'package',
+        where = "userid = $userid",
+        vars = dict(userid = userid),
+        money = money,
+        freshtime = str(now),    
+    )
