@@ -8858,3 +8858,2426 @@ spawned uWSGI worker 2 (pid: 17164, cores: 2)
 spawned uWSGI http 1 (pid: 17165)
 WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55eb4effe210 pid: 17163 (default app)
 WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55eb4effe210 pid: 17164 (default app)
+*** Starting uWSGI 2.0.25.1 (64bit) on [Sun Apr 28 13:40:09 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:38121 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x55f7903a4600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 5374)
+spawned uWSGI worker 1 (pid: 5376, cores: 2)
+spawned uWSGI worker 2 (pid: 5377, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 5378)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55f7903a4600 pid: 5376 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55f7903a4600 pid: 5377 (default app)
+0.01 (1): SELECT password FROM user_data WHERE userid='16738588002'
+[pid: 5377|app: 0|req: 1/1] 192.168.3.53 () {36 vars in 544 bytes} [Sun Apr 28 13:41:26 2024] POST /login?userid=16738588002&password=123456 => generated 93 bytes in 47 msecs (HTTP/1.1 200) 0 headers in 19 bytes (2 switches on core 0)
+0.01 (1): SELECT count(*) as num FROM user_data WHERE userid='13280489318'
+[pid: 5377|app: 0|req: 2/2] 192.168.3.53 () {36 vars in 644 bytes} [Sun Apr 28 13:41:34 2024] POST /register?phonenum=13280489318&password=Slx123456?&nick=slx&sex=1&idcard=370481200212292616 => generated 69 bytes in 16 msecs (HTTP/1.1 200) 0 headers in 19 bytes (2 switches on core 1)
+2024-04-28 13:43:36|ERROR|app.py:36|invalid literal for int() with base 10: ''
+Traceback (most recent call last):
+  File "app.py", line 34, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 96, in GET
+    version = int(req.version)
+ValueError: invalid literal for int() with base 10: ''
+[pid: 5376|app: 0|req: 1/3] 192.168.3.53 () {34 vars in 490 bytes} [Sun Apr 28 13:43:36 2024] GET /shop/cfg?version&=10000 => generated 4 bytes in 2 msecs (HTTP/1.1 200) 0 headers in 19 bytes (2 switches on core 0)
+[pid: 5376|app: 0|req: 2/4] 192.168.3.53 () {34 vars in 487 bytes} [Sun Apr 28 13:43:46 2024] GET /shop/cfg?version=10000 => generated 1368 bytes in 1 msecs (HTTP/1.1 200) 0 headers in 19 bytes (2 switches on core 1)
+Gracefully killing worker 1 (pid: 5376)...
+gateway "uWSGI http 1" has been buried (pid: 5378)
+...brutally killing workers...
+worker 2 buried after 1 seconds
+Sun Apr 28 13:50:04 2024 - worker 1 (pid: 5376) is taking too much time to die...NO MERCY !!!
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/slx/py/uwsgi
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (127.0.0.1:38121)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.25.1 (64bit) on [Sun Apr 28 13:50:06 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 5
+uwsgi socket 0 bound to TCP address 127.0.0.1:34991 (port auto-assigned) fd 4
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x55db4dafc4a0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 5374)
+spawned uWSGI worker 1 (pid: 6369, cores: 2)
+spawned uWSGI worker 2 (pid: 6370, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 6371)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55db4dafc4a0 pid: 6370 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55db4dafc4a0 pid: 6369 (default app)
+*** Starting uWSGI 2.0.25.1 (64bit) on [Sun Apr 28 21:06:53 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:33719 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x563ea39f8600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 7038)
+spawned uWSGI worker 1 (pid: 7040, cores: 2)
+spawned uWSGI worker 2 (pid: 7041, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 7042)
+Traceback (most recent call last):
+  File "app.py", line 4, in <module>
+Traceback (most recent call last):
+  File "app.py", line 4, in <module>
+    import Account
+  File "./Account.py", line 2, in <module>
+    import Config
+  File "./Config.py", line 39
+    grds.set('name'm 'zhangsan')
+                   ^
+SyntaxError: invalid syntax
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+    import Account
+  File "./Account.py", line 2, in <module>
+    import Config
+  File "./Config.py", line 39
+    grds.set('name'm 'zhangsan')
+                   ^
+SyntaxError: invalid syntax
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 7042)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Sun Apr 28 21:07:44 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:43607 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x563474e89600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 7217)
+spawned uWSGI worker 1 (pid: 7221, cores: 2)
+spawned uWSGI worker 2 (pid: 7222, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 7223)
+Traceback (most recent call last):
+  File "app.py", line 4, in <module>
+    import Account
+  File "./Account.py", line 2, in <module>
+    import Config
+  File "./Config.py", line 3, in <module>
+    import redis
+ImportError: No module named redis
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+Traceback (most recent call last):
+  File "app.py", line 4, in <module>
+    import Account
+  File "./Account.py", line 2, in <module>
+    import Config
+  File "./Config.py", line 3, in <module>
+    import redis
+ImportError: No module named redis
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 7223)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Sun Apr 28 21:11:04 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:45445 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x555eeb781600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 7417)
+spawned uWSGI worker 1 (pid: 7418, cores: 2)
+spawned uWSGI worker 2 (pid: 7419, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 7420)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x555eeb781600 pid: 7418 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x555eeb781600 pid: 7419 (default app)
+gateway "uWSGI http 1" has been buried (pid: 7420)
+...brutally killing workers...
+Gracefully killing worker 1 (pid: 7418)...
+Gracefully killing worker 2 (pid: 7419)...
+Sun Apr 28 21:35:51 2024 - worker 1 (pid: 7418) is taking too much time to die...NO MERCY !!!
+Sun Apr 28 21:35:51 2024 - worker 2 (pid: 7419) is taking too much time to die...NO MERCY !!!
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/slx/py/uwsgi
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (127.0.0.1:45445)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.25.1 (64bit) on [Sun Apr 28 21:35:53 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 5
+uwsgi socket 0 bound to TCP address 127.0.0.1:46121 (port auto-assigned) fd 4
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x561df7c1f4a0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 7417)
+spawned uWSGI worker 1 (pid: 8560, cores: 2)
+spawned uWSGI worker 2 (pid: 8561, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 8562)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x561df7c1f4a0 pid: 8560 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x561df7c1f4a0 pid: 8561 (default app)
+*** Starting uWSGI 2.0.25.1 (64bit) on [Thu May  9 21:05:13 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:34101 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x55ed6ac6d600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 3517)
+spawned uWSGI worker 1 (pid: 3519, cores: 2)
+spawned uWSGI worker 2 (pid: 3520, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 3521)
+Traceback (most recent call last):
+  File "app.py", line 4, in <module>
+    import Account
+  File "./Account.py", line 6, in <module>
+    import DBManage
+  File "./DBManage.py", line 23
+    **packageinfo,    
+                 ^
+SyntaxError: invalid syntax
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+Traceback (most recent call last):
+  File "app.py", line 4, in <module>
+    import Account
+  File "./Account.py", line 6, in <module>
+    import DBManage
+  File "./DBManage.py", line 23
+    **packageinfo,    
+                 ^
+SyntaxError: invalid syntax
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+--- no python application found, check your startup logs for errors ---
+[pid: 3520|app: -1|req: -1/1] 192.168.0.123 () {36 vars in 546 bytes} [Thu May  9 21:06:29 2024] POST /login?userid=16738588002&password=123456 => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 3519|app: -1|req: -1/2] 192.168.0.123 () {36 vars in 546 bytes} [Thu May  9 21:06:41 2024] POST /login?userid=16738588002&password=123456 => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 3519|app: -1|req: -1/3] 192.168.0.123 () {36 vars in 546 bytes} [Thu May  9 21:06:43 2024] POST /login?userid=16738588002&password=123456 => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 3520|app: -1|req: -1/4] 192.168.0.123 () {34 vars in 447 bytes} [Thu May  9 21:06:55 2024] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 1)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 3521)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Thu May  9 21:07:31 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:37339 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x560d7b8e1600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 3636)
+spawned uWSGI worker 1 (pid: 3638, cores: 2)
+spawned uWSGI worker 2 (pid: 3639, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 3640)
+Traceback (most recent call last):
+  File "app.py", line 4, in <module>
+    import Account
+  File "./Account.py", line 6, in <module>
+    import DBManage
+  File "./DBManage.py", line 23
+    **packageinfo,    
+                 ^
+SyntaxError: invalid syntax
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+Traceback (most recent call last):
+  File "app.py", line 4, in <module>
+    import Account
+  File "./Account.py", line 6, in <module>
+    import DBManage
+  File "./DBManage.py", line 23
+    **packageinfo,    
+                 ^
+SyntaxError: invalid syntax
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+--- no python application found, check your startup logs for errors ---
+[pid: 3638|app: -1|req: -1/1] 192.168.0.123 () {34 vars in 447 bytes} [Thu May  9 21:07:35 2024] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 3638|app: -1|req: -1/2] 192.168.0.123 () {34 vars in 447 bytes} [Thu May  9 21:07:50 2024] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 1)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 3640)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Thu May  9 21:25:18 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:36763 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x559ab4aa6700
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 4161)
+spawned uWSGI worker 1 (pid: 4163, cores: 2)
+spawned uWSGI worker 2 (pid: 4164, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 4165)
+Traceback (most recent call last):
+  File "app.py", line 4, in <module>
+    import Account
+  File "./Account.py", line 6, in <module>
+    import DBManage
+  File "./DBManage.py", line 31
+    vars = dict(userid = userid)
+       ^
+SyntaxError: invalid syntax
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+Traceback (most recent call last):
+  File "app.py", line 4, in <module>
+    import Account
+  File "./Account.py", line 6, in <module>
+    import DBManage
+  File "./DBManage.py", line 31
+    vars = dict(userid = userid)
+       ^
+SyntaxError: invalid syntax
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+--- no python application found, check your startup logs for errors ---
+[pid: 4163|app: -1|req: -1/1] 192.168.0.123 () {34 vars in 445 bytes} [Thu May  9 21:27:39 2024] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 4164|app: -1|req: -1/2] 192.168.0.123 () {34 vars in 446 bytes} [Thu May  9 21:27:41 2024] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 4165)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Thu May  9 21:34:17 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:43877 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x55bc3bcb0700
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 4548)
+spawned uWSGI worker 1 (pid: 4550, cores: 2)
+spawned uWSGI worker 2 (pid: 4551, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 4552)
+Traceback (most recent call last):
+  File "app.py", line 33, in <module>
+    session = web.session.Session(app, web.session.RedisStore(Config.grds, Config.SESSION_EXPIRETIME))
+AttributeError: 'module' object has no attribute 'RedisStore'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+Traceback (most recent call last):
+  File "app.py", line 33, in <module>
+    session = web.session.Session(app, web.session.RedisStore(Config.grds, Config.SESSION_EXPIRETIME))
+AttributeError: 'module' object has no attribute 'RedisStore'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+--- no python application found, check your startup logs for errors ---
+[pid: 4550|app: -1|req: -1/1] 192.168.0.123 () {34 vars in 447 bytes} [Thu May  9 21:34:23 2024] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Gracefully killing worker 1 (pid: 4550)...
+gateway "uWSGI http 1" has been buried (pid: 4552)
+...gracefully killing workers...
+worker 2 buried after 1 seconds
+Thu May  9 21:37:02 2024 - worker 1 (pid: 4550) is taking too much time to die...NO MERCY !!!
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/slx/py/uwsgi
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (127.0.0.1:43877)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.25.1 (64bit) on [Thu May  9 21:37:03 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 5
+uwsgi socket 0 bound to TCP address 127.0.0.1:33355 (port auto-assigned) fd 4
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x55eb97306480
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 4548)
+spawned uWSGI worker 1 (pid: 4904, cores: 2)
+spawned uWSGI worker 2 (pid: 4905, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 4906)
+Traceback (most recent call last):
+  File "app.py", line 33, in <module>
+    session = web.session.Session(app, web.session.RedisStore(Config.grds, Config.SESSION_EXPIRETIME))
+AttributeError: 'module' object has no attribute 'RedisStore'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+Traceback (most recent call last):
+  File "app.py", line 33, in <module>
+    session = web.session.Session(app, web.session.RedisStore(Config.grds, Config.SESSION_EXPIRETIME))
+AttributeError: 'module' object has no attribute 'RedisStore'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 18:32:39 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:46247 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x56411c109600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 6608)
+spawned uWSGI worker 1 (pid: 6610, cores: 2)
+spawned uWSGI worker 2 (pid: 6611, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 6612)
+Traceback (most recent call last):
+  File "app.py", line 33, in <module>
+    session = web.session.Session(app, web.session.RedisStore(Config.grds, Config.SESSION_EXPIRETIME))
+AttributeError: Traceback (most recent call last):
+  File "app.py", line 33, in <module>
+    session = web.session.Session(app, web.session.RedisStore(Config.grds, Config.SESSION_EXPIRETIME))
+AttributeError: 'module' object has no attribute 'RedisStore'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+'module' object has no attribute 'RedisStore'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 6612)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 18:38:42 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:45485 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x55f2dfb56600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 6883)
+spawned uWSGI worker 1 (pid: 6884, cores: 2)
+spawned uWSGI worker 2 (pid: 6885, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 6886)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55f2dfb56600 pid: 6885 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55f2dfb56600 pid: 6884 (default app)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 290, in process
+    return self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 281, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 531, in _delegate
+    return handle_class(cls)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 509, in handle_class
+    return tocall(*args)
+TypeError: GET() takes exactly 2 arguments (1 given)
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 288, in process
+    return p(lambda: process(processors))
+  File "/usr/local/lib/python2.7/dist-packages/web/session.py", line 105, in _processor
+    return handler()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 288, in <lambda>
+    return p(lambda: process(processors))
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 297, in process
+    raise self.internalerror()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 588, in internalerror
+    return debugerror()
+  File "/usr/local/lib/python2.7/dist-packages/web/debugerror.py", line 337, in debugerror
+    return web._InternalError(djangoerror())
+  File "/usr/local/lib/python2.7/dist-packages/web/debugerror.py", line 315, in djangoerror
+    djangoerror_r = Template(djangoerror_t, filename=__file__, filter=websafe)
+  File "/usr/local/lib/python2.7/dist-packages/web/template.py", line 943, in __init__
+    code = self.compile_template(text, filename)
+  File "/usr/local/lib/python2.7/dist-packages/web/template.py", line 1020, in compile_template
+    compiled_code = compile(code, filename, "exec")
+  File "/usr/local/lib/python2.7/dist-packages/web/debugerror.pyc", line 8
+    def with (exception_type, exception_value, frames)
+           ^
+SyntaxError: invalid syntax
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 288, in process
+    return p(lambda: process(processors))
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 700, in processor
+    return handler()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 288, in <lambda>
+    return p(lambda: process(processors))
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 297, in process
+    raise self.internalerror()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 588, in internalerror
+    return debugerror()
+  File "/usr/local/lib/python2.7/dist-packages/web/debugerror.py", line 337, in debugerror
+    return web._InternalError(djangoerror())
+  File "/usr/local/lib/python2.7/dist-packages/web/debugerror.py", line 315, in djangoerror
+    djangoerror_r = Template(djangoerror_t, filename=__file__, filter=websafe)
+  File "/usr/local/lib/python2.7/dist-packages/web/template.py", line 943, in __init__
+    code = self.compile_template(text, filename)
+  File "/usr/local/lib/python2.7/dist-packages/web/template.py", line 1020, in compile_template
+    compiled_code = compile(code, filename, "exec")
+  File "/usr/local/lib/python2.7/dist-packages/web/debugerror.pyc", line 8
+    def with (exception_type, exception_value, frames)
+           ^
+SyntaxError: invalid syntax
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 288, in process
+    return p(lambda: process(processors))
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 700, in processor
+    return handler()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 288, in <lambda>
+    return p(lambda: process(processors))
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 297, in process
+    raise self.internalerror()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 588, in internalerror
+    return debugerror()
+  File "/usr/local/lib/python2.7/dist-packages/web/debugerror.py", line 337, in debugerror
+    return web._InternalError(djangoerror())
+  File "/usr/local/lib/python2.7/dist-packages/web/debugerror.py", line 315, in djangoerror
+    djangoerror_r = Template(djangoerror_t, filename=__file__, filter=websafe)
+  File "/usr/local/lib/python2.7/dist-packages/web/template.py", line 943, in __init__
+    code = self.compile_template(text, filename)
+  File "/usr/local/lib/python2.7/dist-packages/web/template.py", line 1020, in compile_template
+    compiled_code = compile(code, filename, "exec")
+  File "/usr/local/lib/python2.7/dist-packages/web/debugerror.pyc", line 8
+    def with (exception_type, exception_value, frames)
+           ^
+SyntaxError: invalid syntax
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 288, in process
+    return p(lambda: process(processors))
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 717, in processor
+    result = handler()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 288, in <lambda>
+    return p(lambda: process(processors))
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 297, in process
+    raise self.internalerror()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 588, in internalerror
+    return debugerror()
+  File "/usr/local/lib/python2.7/dist-packages/web/debugerror.py", line 337, in debugerror
+    return web._InternalError(djangoerror())
+  File "/usr/local/lib/python2.7/dist-packages/web/debugerror.py", line 315, in djangoerror
+    djangoerror_r = Template(djangoerror_t, filename=__file__, filter=websafe)
+  File "/usr/local/lib/python2.7/dist-packages/web/template.py", line 943, in __init__
+    code = self.compile_template(text, filename)
+  File "/usr/local/lib/python2.7/dist-packages/web/template.py", line 1020, in compile_template
+    compiled_code = compile(code, filename, "exec")
+  File "/usr/local/lib/python2.7/dist-packages/web/debugerror.pyc", line 8
+    def with (exception_type, exception_value, frames)
+           ^
+SyntaxError: invalid syntax
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 288, in process
+    return p(lambda: process(processors))
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 700, in processor
+    return handler()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 288, in <lambda>
+    return p(lambda: process(processors))
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 297, in process
+    raise self.internalerror()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 588, in internalerror
+    return debugerror()
+  File "/usr/local/lib/python2.7/dist-packages/web/debugerror.py", line 337, in debugerror
+    return web._InternalError(djangoerror())
+  File "/usr/local/lib/python2.7/dist-packages/web/debugerror.py", line 315, in djangoerror
+    djangoerror_r = Template(djangoerror_t, filename=__file__, filter=websafe)
+  File "/usr/local/lib/python2.7/dist-packages/web/template.py", line 943, in __init__
+    code = self.compile_template(text, filename)
+  File "/usr/local/lib/python2.7/dist-packages/web/template.py", line 1020, in compile_template
+    compiled_code = compile(code, filename, "exec")
+  File "/usr/local/lib/python2.7/dist-packages/web/debugerror.pyc", line 8
+    def with (exception_type, exception_value, frames)
+           ^
+SyntaxError: invalid syntax
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 329, in wsgi
+    result = self.handle_with_processors()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 300, in handle_with_processors
+    return process(self.processors)
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 297, in process
+    raise self.internalerror()
+  File "/usr/local/lib/python2.7/dist-packages/web/application.py", line 588, in internalerror
+    return debugerror()
+  File "/usr/local/lib/python2.7/dist-packages/web/debugerror.py", line 337, in debugerror
+    return web._InternalError(djangoerror())
+  File "/usr/local/lib/python2.7/dist-packages/web/debugerror.py", line 315, in djangoerror
+    djangoerror_r = Template(djangoerror_t, filename=__file__, filter=websafe)
+  File "/usr/local/lib/python2.7/dist-packages/web/template.py", line 943, in __init__
+    code = self.compile_template(text, filename)
+  File "/usr/local/lib/python2.7/dist-packages/web/template.py", line 1020, in compile_template
+    compiled_code = compile(code, filename, "exec")
+  File "/usr/local/lib/python2.7/dist-packages/web/debugerror.pyc", line 8
+    def with (exception_type, exception_value, frames)
+           ^
+SyntaxError: invalid syntax
+
+Template traceback:
+    File '/usr/local/lib/python2.7/dist-packages/web/debugerror.pyc', line 8
+        None
+[pid: 6884|app: 0|req: 1/1] 192.168.3.53 () {34 vars in 446 bytes} [Fri May 10 18:39:13 2024] GET / => generated 0 bytes in 42 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+0.02 (1): SELECT password FROM user_data WHERE userid='16738588002'
+[pid: 6885|app: 0|req: 1/2] 192.168.3.53 () {36 vars in 545 bytes} [Fri May 10 18:39:52 2024] POST /login?userid=16738588002&password=123456 => generated 93 bytes in 98 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+0.0 (1): SELECT count(*) as num FROM user_data WHERE userid='13280489318'
+[pid: 6884|app: 0|req: 2/3] 192.168.3.53 () {38 vars in 717 bytes} [Fri May 10 18:40:06 2024] POST /register?phonenum=13280489318&password=Slx123456?&nick=slx&sex=1&idcard=370481200212292616 => generated 69 bytes in 22 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+[pid: 6885|app: 0|req: 2/4] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 18:40:36 2024] POST /login?userid=16738588002&password=Slx123456? => generated 93 bytes in 15 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+0.0 (1): SELECT password FROM user_data WHERE userid='13280489318'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T18:42:40.624270' WHERE userid='13280489318'
+[pid: 6884|app: 0|req: 3/5] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 18:42:40 2024] POST /login?userid=13280489318&password=Slx123456? => generated 11 bytes in 21 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+[pid: 6885|app: 0|req: 3/6] 192.168.3.53 () {36 vars in 561 bytes} [Fri May 10 18:42:52 2024] GET /shop/cfg?version=10000 => generated 1361 bytes in 3 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+0.0 (1): SELECT count(*) as num FROM user_data WHERE userid='16738588002'
+0.0 (2): INSERT INTO user_data (createtime, idcard, lastlogintime, nick, password, phonenum, secpassword, sex, status, userid) VALUES ('2024-05-10T18:43:48.317511', '370481200212292616', '2024-05-10T18:43:48.317511', 'slx', 'Slx123456?', '16738588002', '123456', '1', 0, 16738588002)
+0.0 (3): SELECT last_insert_id();
+2024-05-10 18:43:48|ERROR|app.py:45|'datetime'
+Traceback (most recent call last):
+  File "app.py", line 43, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 92, in POST
+    Account.InitUser(phonenum, password, nick, sex, idcard)
+  File "./Account.py", line 116, in InitUser
+    strKey = Config.KEY_PACKAGE.format(userid = phonenum)
+KeyError: 'datetime'
+[pid: 6885|app: 0|req: 4/7] 192.168.3.53 () {38 vars in 717 bytes} [Fri May 10 18:43:48 2024] POST /register?phonenum=16738588002&password=Slx123456?&nick=slx&sex=1&idcard=370481200212292616 => generated 4 bytes in 19 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T18:44:02.484874' WHERE userid='16738588002'
+[pid: 6884|app: 0|req: 4/8] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 18:44:02 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 22 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+[pid: 6885|app: 0|req: 5/9] 192.168.3.53 () {36 vars in 561 bytes} [Fri May 10 18:44:07 2024] GET /shop/cfg?version=10000 => generated 1361 bytes in 2 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 6886)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 18:48:17 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:35073 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x5596dd2b3600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 7517)
+spawned uWSGI worker 1 (pid: 7519, cores: 2)
+spawned uWSGI worker 2 (pid: 7520, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 7521)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5596dd2b3600 pid: 7519 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5596dd2b3600 pid: 7520 (default app)
+0.0 (1): SELECT count(*) as num FROM user_data WHERE userid='16738588002'
+0.0 (2): INSERT INTO user_data (createtime, idcard, lastlogintime, nick, password, phonenum, secpassword, sex, status, userid) VALUES ('2024-05-10T18:48:40.005996', '370481200212292616', '2024-05-10T18:48:40.005996', 'slx', 'Slx123456?', '16738588002', '123456', '1', 0, 16738588002)
+0.0 (3): SELECT last_insert_id();
+ERR: INSERT INTO package (coin, freshtime, money, prop_1001, prop_1002, prop_1003, prop_1006, prop_1007, userid) VALUES (0, '2024-05-10 18:48:40.005996', 10000, 0, 0, 0, 0, 0, '16738588002')
+2024-05-10 18:48:40|ERROR|app.py:45|(1054, "Unknown column 'prop_1006' in 'field list'")
+Traceback (most recent call last):
+  File "app.py", line 43, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 92, in POST
+    Account.InitUser(phonenum, password, nick, sex, idcard)
+  File "./Account.py", line 132, in InitUser
+    DBManage.InitPackage(packageinfo)
+  File "./DBManage.py", line 23, in InitPackage
+    **packageinfo
+  File "/usr/local/lib/python2.7/dist-packages/web/db.py", line 1016, in insert
+    self._db_execute(db_cursor, q1)
+  File "/usr/local/lib/python2.7/dist-packages/web/db.py", line 771, in _db_execute
+    out = cur.execute(query, params)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 209, in execute
+    res = self._query(query)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 315, in _query
+    db.query(q)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/connections.py", line 239, in query
+    _mysql.connection.query(self, query)
+OperationalError: (1054, "Unknown column 'prop_1006' in 'field list'")
+[pid: 7519|app: 0|req: 1/1] 192.168.3.53 () {38 vars in 717 bytes} [Fri May 10 18:48:39 2024] POST /register?phonenum=16738588002&password=Slx123456?&nick=slx&sex=1&idcard=370481200212292616 => generated 4 bytes in 29 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+0.0 (1): SELECT count(*) as num FROM user_data WHERE userid='16738588002'
+0.0 (2): INSERT INTO user_data (createtime, idcard, lastlogintime, nick, password, phonenum, secpassword, sex, status, userid) VALUES ('2024-05-10T18:55:36.998676', '370481200212292616', '2024-05-10T18:55:36.998676', 'slx', 'Slx123456?', '16738588002', '123456', '1', 0, 16738588002)
+0.0 (3): SELECT last_insert_id();
+0.0 (4): INSERT INTO package (coin, freshtime, money, prop_1001, prop_1002, prop_1003, prop_1006, prop_1007, userid) VALUES (0, '2024-05-10 18:55:36.998676', 10000, 0, 0, 0, 0, 0, '16738588002')
+0.0 (5): SELECT last_insert_id();
+[pid: 7520|app: 0|req: 1/2] 192.168.3.53 () {38 vars in 717 bytes} [Fri May 10 18:55:36 2024] POST /register?phonenum=16738588002&password=Slx123456?&nick=slx&sex=1&idcard=370481200212292616 => generated 11 bytes in 25 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+[pid: 7519|app: 0|req: 2/3] 192.168.3.53 () {36 vars in 678 bytes} [Fri May 10 18:57:57 2024] GET /shop/buy?userid=16738588002&propid=1001&propnum=1&shopversion=10000&version=10000 => generated 79 bytes in 2 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T18:59:03.399862' WHERE userid='16738588002'
+[pid: 7520|app: 0|req: 2/4] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 18:59:03 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 16 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+[pid: 7519|app: 0|req: 3/5] 192.168.3.53 () {36 vars in 561 bytes} [Fri May 10 18:59:11 2024] GET /shop/cfg?version=10000 => generated 1361 bytes in 2 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+2024-05-10 18:59:14|ERROR|app.py:45|'module' object is not callable
+Traceback (most recent call last):
+  File "app.py", line 43, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 54, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 134, in GET
+    return json({'code': 0})
+TypeError: 'module' object is not callable
+[pid: 7519|app: 0|req: 4/6] 192.168.3.53 () {36 vars in 679 bytes} [Fri May 10 18:59:14 2024] GET /shop/buy?userid=16738588002&propid=1001&propnum=1&shopversion=10000&version=10000 => generated 4 bytes in 2 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 7521)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 19:01:02 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:40659 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x55f0f727e600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 8035)
+spawned uWSGI worker 1 (pid: 8036, cores: 2)
+spawned uWSGI worker 2 (pid: 8037, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 8038)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55f0f727e600 pid: 8037 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55f0f727e600 pid: 8036 (default app)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:01:08.414543' WHERE userid='16738588002'
+[pid: 8036|app: 0|req: 1/1] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 19:01:08 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 21 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+[pid: 8037|app: 0|req: 1/2] 192.168.3.53 () {36 vars in 679 bytes} [Fri May 10 19:01:21 2024] GET /shop/buy?userid=16738588002&propid=1001&propnum=1&shopversion=10000&version=10000 => generated 11 bytes in 3 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 8038)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 19:03:34 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:44407 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x558ba3101600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 8228)
+spawned uWSGI worker 1 (pid: 8230, cores: 2)
+spawned uWSGI worker 2 (pid: 8231, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 8232)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x558ba3101600 pid: 8230 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x558ba3101600 pid: 8231 (default app)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:03:48.882343' WHERE userid='16738588002'
+[pid: 8231|app: 0|req: 1/1] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 19:03:48 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 25 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+[pid: 8230|app: 0|req: 1/2] 192.168.3.53 () {36 vars in 679 bytes} [Fri May 10 19:03:51 2024] GET /shop/buy?userid=16738588002&propid=1001&propnum=1&shopversion=10000&version=10000 => generated 11 bytes in 3 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 8232)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 19:06:40 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:43335 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x560eb48fb600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 8436)
+spawned uWSGI worker 1 (pid: 8437, cores: 2)
+spawned uWSGI worker 2 (pid: 8438, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 8439)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x560eb48fb600 pid: 8437 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x560eb48fb600 pid: 8438 (default app)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:06:53.746412' WHERE userid='16738588002'
+[pid: 8437|app: 0|req: 1/1] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 19:06:53 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 27 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+[pid: 8438|app: 0|req: 1/2] 192.168.3.53 () {36 vars in 561 bytes} [Fri May 10 19:06:57 2024] GET /shop/cfg?version=10000 => generated 1361 bytes in 3 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+[pid: 8437|app: 0|req: 2/3] 192.168.3.53 () {36 vars in 679 bytes} [Fri May 10 19:07:00 2024] GET /shop/buy?userid=16738588002&propid=1001&propnum=1&shopversion=10000&version=10000 => generated 11 bytes in 2 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 8439)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 19:09:46 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:43169 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x55c173baa600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 8674)
+spawned uWSGI worker 1 (pid: 8676, cores: 2)
+spawned uWSGI worker 2 (pid: 8677, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 8678)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55c173baa600 pid: 8677 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55c173baa600 pid: 8676 (default app)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:09:52.483904' WHERE userid='16738588002'
+[pid: 8676|app: 0|req: 1/1] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 19:09:52 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 27 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+[pid: 8676|app: 0|req: 2/2] 192.168.3.53 () {36 vars in 679 bytes} [Fri May 10 19:10:00 2024] GET /shop/buy?userid=16738588002&propid=1001&propnum=1&shopversion=10000&version=10000 => generated 11 bytes in 3 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+[pid: 8676|app: 0|req: 3/3] 192.168.3.53 () {36 vars in 679 bytes} [Fri May 10 19:10:17 2024] GET /shop/buy?userid=16738588002&propid=1001&propnum=1&shopversion=10000&version=10000 => generated 11 bytes in 2 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 8678)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 19:10:39 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:40883 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x55f79edb4600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 8856)
+spawned uWSGI worker 1 (pid: 8857, cores: 2)
+spawned uWSGI worker 2 (pid: 8858, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 8859)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55f79edb4600 pid: 8857 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55f79edb4600 pid: 8858 (default app)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:10:44.156001' WHERE userid='16738588002'
+[pid: 8858|app: 0|req: 1/1] 192.168.3.53 () {38 vars in 624 bytes} [Fri May 10 19:10:44 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 24 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+2024-05-10 19:10:47|ERROR|app.py:45|local variable 'needmoney' referenced before assignment
+Traceback (most recent call last):
+  File "app.py", line 43, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 54, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 133, in GET
+    dictInfo = Shop.ShopBuy(userid , propid , propnum, shopversion, version)
+  File "./Shop.py", line 42, in ShopBuy
+    print(needmoney)
+UnboundLocalError: local variable 'needmoney' referenced before assignment
+[pid: 8858|app: 0|req: 2/2] 192.168.3.53 () {36 vars in 678 bytes} [Fri May 10 19:10:47 2024] GET /shop/buy?userid=16738588002&propid=1001&propnum=1&shopversion=10000&version=10000 => generated 4 bytes in 3 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 8859)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 19:11:12 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:36543 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x56083090b600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 9011)
+spawned uWSGI worker 1 (pid: 9013, cores: 2)
+spawned uWSGI worker 2 (pid: 9014, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 9015)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x56083090b600 pid: 9014 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x56083090b600 pid: 9013 (default app)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:11:17.676872' WHERE userid='16738588002'
+[pid: 9013|app: 0|req: 1/1] 192.168.3.53 () {38 vars in 624 bytes} [Fri May 10 19:11:17 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 22 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:11:20.853778' WHERE userid='16738588002'
+[pid: 9013|app: 0|req: 2/2] 192.168.3.53 () {38 vars in 624 bytes} [Fri May 10 19:11:20 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 20 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+##################################
+[pid: 9014|app: 0|req: 1/3] 192.168.3.53 () {36 vars in 679 bytes} [Fri May 10 19:11:23 2024] GET /shop/buy?userid=16738588002&propid=1001&propnum=1&shopversion=10000&version=10000 => generated 11 bytes in 3 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 9015)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 19:11:52 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:41813 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x560abeb11600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 9151)
+spawned uWSGI worker 1 (pid: 9153, cores: 2)
+spawned uWSGI worker 2 (pid: 9154, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 9155)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x560abeb11600 pid: 9153 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x560abeb11600 pid: 9154 (default app)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:11:56.813475' WHERE userid='16738588002'
+[pid: 9153|app: 0|req: 1/1] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 19:11:56 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 26 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+##################################
+[pid: 9153|app: 0|req: 2/2] 192.168.3.53 () {36 vars in 679 bytes} [Fri May 10 19:11:58 2024] GET /shop/buy?userid=16738588002&propid=1001&propnum=1&shopversion=10000&version=10000 => generated 11 bytes in 2 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 9155)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 19:12:55 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:40433 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x5577b77bb600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 9301)
+spawned uWSGI worker 1 (pid: 9303, cores: 2)
+spawned uWSGI worker 2 (pid: 9304, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 9305)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5577b77bb600 pid: 9303 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5577b77bb600 pid: 9304 (default app)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:13:00.047914' WHERE userid='16738588002'
+[pid: 9304|app: 0|req: 1/1] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 19:13:00 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 19 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+1##################################
+2##################################
+[pid: 9304|app: 0|req: 2/2] 192.168.3.53 () {36 vars in 679 bytes} [Fri May 10 19:13:03 2024] GET /shop/buy?userid=16738588002&propid=1001&propnum=1&shopversion=10000&version=10000 => generated 11 bytes in 2 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+[pid: 9304|app: 0|req: 3/3] 192.168.3.53 () {36 vars in 679 bytes} [Fri May 10 19:17:03 2024] GET /shop/buy?userid=16738588002&propid=1001&propnum=1&shopversion=10000&version=10000 => generated 79 bytes in 3 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+[pid: 9303|app: 0|req: 1/4] 192.168.3.53 () {36 vars in 679 bytes} [Fri May 10 19:17:03 2024] GET /shop/buy?userid=16738588002&propid=1001&propnum=1&shopversion=10000&version=10000 => generated 79 bytes in 3 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:17:16.699307' WHERE userid='16738588002'
+[pid: 9304|app: 0|req: 4/5] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 19:17:16 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 14 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+1##################################
+2##################################
+[pid: 9303|app: 0|req: 2/6] 192.168.3.53 () {36 vars in 679 bytes} [Fri May 10 19:17:19 2024] GET /shop/buy?userid=16738588002&propid=1001&propnum=1&shopversion=10000&version=10000 => generated 11 bytes in 2 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 9305)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 19:17:36 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:43377 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x55dc1b690600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 9631)
+spawned uWSGI worker 1 (pid: 9632, cores: 2)
+spawned uWSGI worker 2 (pid: 9633, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 9634)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55dc1b690600 pid: 9633 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55dc1b690600 pid: 9632 (default app)
+2##################################
+[pid: 9632|app: 0|req: 1/1] 192.168.3.53 () {36 vars in 679 bytes} [Fri May 10 19:17:39 2024] GET /shop/buy?userid=16738588002&propid=1001&propnum=1&shopversion=10000&version=10000 => generated 11 bytes in 3 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 9634)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 19:21:59 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:42601 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x55cc5fcba600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 9803)
+spawned uWSGI worker 1 (pid: 9804, cores: 2)
+spawned uWSGI worker 2 (pid: 9805, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 9806)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55cc5fcba600 pid: 9805 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55cc5fcba600 pid: 9804 (default app)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:22:04.294430' WHERE userid='16738588002'
+[pid: 9805|app: 0|req: 1/1] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 19:22:04 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 24 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+2##################################
+[pid: 9805|app: 0|req: 2/2] 192.168.3.53 () {36 vars in 679 bytes} [Fri May 10 19:22:07 2024] GET /shop/buy?userid=16738588002&propid=1001&propnum=1&shopversion=10000&version=10000 => generated 11 bytes in 2 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+[pid: 9804|app: 0|req: 1/3] 192.168.3.53 () {36 vars in 680 bytes} [Fri May 10 19:23:14 2024] GET /shop/buy?userid=16738588002&propid=1001&propnum=12&shopversion=10000&version=10000 => generated 79 bytes in 3 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:23:18.475383' WHERE userid='16738588002'
+[pid: 9804|app: 0|req: 2/4] 192.168.3.53 () {38 vars in 624 bytes} [Fri May 10 19:23:18 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 24 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+2##################################
+[pid: 9804|app: 0|req: 3/5] 192.168.3.53 () {36 vars in 680 bytes} [Fri May 10 19:23:19 2024] GET /shop/buy?userid=16738588002&propid=1001&propnum=12&shopversion=10000&version=10000 => generated 11 bytes in 2 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+[pid: 9804|app: 0|req: 4/6] 192.168.3.53 () {36 vars in 681 bytes} [Fri May 10 19:24:01 2024] GET /shop/buy?userid=16738588002&propid=1001&propnum=12&shopversion=10000&version=10000 => generated 79 bytes in 2 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:24:05.094480' WHERE userid='16738588002'
+[pid: 9804|app: 0|req: 5/7] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 19:24:05 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 15 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+2##################################
+[pid: 9804|app: 0|req: 6/8] 192.168.3.53 () {36 vars in 681 bytes} [Fri May 10 19:24:06 2024] GET /shop/buy?userid=16738588002&propid=1001&propnum=12&shopversion=10000&version=10000 => generated 11 bytes in 2 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 9806)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 19:25:54 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:38551 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x55c008e88600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 10177)
+spawned uWSGI worker 1 (pid: 10179, cores: 2)
+spawned uWSGI worker 2 (pid: 10180, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 10181)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55c008e88600 pid: 10179 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55c008e88600 pid: 10180 (default app)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:26:01.146675' WHERE userid='16738588002'
+[pid: 10180|app: 0|req: 1/1] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 19:26:01 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 28 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+2##################################
+[pid: 10179|app: 0|req: 1/2] 192.168.3.53 () {36 vars in 681 bytes} [Fri May 10 19:26:03 2024] GET /shop/buy?userid=16738588002&propid=1001&propnum=12&shopversion=10000&version=10000 => generated 11 bytes in 3 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 10181)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 19:27:13 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:41413 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x55776cf76600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 10346)
+spawned uWSGI worker 1 (pid: 10348, cores: 2)
+spawned uWSGI worker 2 (pid: 10349, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 10350)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55776cf76600 pid: 10349 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55776cf76600 pid: 10348 (default app)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:27:18.386891' WHERE userid='16738588002'
+[pid: 10349|app: 0|req: 1/1] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 19:27:18 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 24 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+2##################################
+[pid: 10348|app: 0|req: 1/2] 192.168.3.53 () {36 vars in 681 bytes} [Fri May 10 19:27:20 2024] GET /shop/buy?userid=16738588002&propid=1001&propnum=12&shopversion=10000&version=10000 => generated 11 bytes in 3 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 10350)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 19:27:34 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:34427 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x564baadd3600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 10467)
+spawned uWSGI worker 1 (pid: 10468, cores: 2)
+spawned uWSGI worker 2 (pid: 10469, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 10470)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x564baadd3600 pid: 10468 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x564baadd3600 pid: 10469 (default app)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:27:39.397539' WHERE userid='16738588002'
+[pid: 10468|app: 0|req: 1/1] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 19:27:39 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 23 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+2##################################
+4##################################
+2024-05-10 19:27:41|ERROR|app.py:45|u'1001'
+Traceback (most recent call last):
+  File "app.py", line 43, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 54, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 133, in GET
+    dictInfo = Shop.ShopBuy(userid , propid , propnum, shopversion, version)
+  File "./Shop.py", line 52, in ShopBuy
+    cfg = ShopCfg.SHOP_CFG[propid]
+KeyError: u'1001'
+[pid: 10468|app: 0|req: 2/2] 192.168.3.53 () {36 vars in 681 bytes} [Fri May 10 19:27:41 2024] GET /shop/buy?userid=16738588002&propid=1001&propnum=12&shopversion=10000&version=10000 => generated 4 bytes in 3 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 10470)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 19:29:12 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:33543 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x555a3cd1a600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 10625)
+spawned uWSGI worker 1 (pid: 10627, cores: 2)
+spawned uWSGI worker 2 (pid: 10628, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 10629)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x555a3cd1a600 pid: 10628 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x555a3cd1a600 pid: 10627 (default app)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:29:18.037186' WHERE userid='16738588002'
+[pid: 10627|app: 0|req: 1/1] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 19:29:18 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 24 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+2##################################
+3##################################
+4##################################
+5##################################
+6##################################
+[pid: 10627|app: 0|req: 2/2] 192.168.3.53 () {36 vars in 681 bytes} [Fri May 10 19:29:23 2024] GET /shop/buy?userid=16738588002&propid=1001&propnum=12&shopversion=10000&version=10000 => generated 11 bytes in 2 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 10629)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 19:31:08 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:44493 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x560abd5ba600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 10814)
+spawned uWSGI worker 1 (pid: 10815, cores: 2)
+spawned uWSGI worker 2 (pid: 10816, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 10817)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x560abd5ba600 pid: 10815 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x560abd5ba600 pid: 10816 (default app)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:31:13.048908' WHERE userid='16738588002'
+[pid: 10816|app: 0|req: 1/1] 192.168.3.53 () {38 vars in 624 bytes} [Fri May 10 19:31:13 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 24 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+2##################################
+3##################################
+4##################################
+5##################################
+6##################################
+[pid: 10816|app: 0|req: 2/2] 192.168.3.53 () {36 vars in 680 bytes} [Fri May 10 19:31:20 2024] GET /shop/buy?userid=16738588002&propid=1001&propnum=12&shopversion=10000&version=10000 => generated 99 bytes in 2 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 10817)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 19:33:39 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:37217 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x5563cc5f9600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 11023)
+spawned uWSGI worker 1 (pid: 11025, cores: 2)
+spawned uWSGI worker 2 (pid: 11026, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 11027)
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5563cc5f9600 pid: 11026 (default app)
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5563cc5f9600 pid: 11025 (default app)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:33:44.378202' WHERE userid='16738588002'
+[pid: 11025|app: 0|req: 1/1] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 19:33:44 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 23 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+2##################################
+3##################################
+4##################################
+5##################################
+6##################################
+7##################################
+8##################################
+100
+9##################################
+2024-05-10 19:33:46|ERROR|app.py:45|'datetime'
+Traceback (most recent call last):
+  File "app.py", line 43, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 54, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 133, in POST
+    dictInfo = Shop.ShopBuy(userid , propid , propnum, shopversion, version)
+  File "./Shop.py", line 71, in ShopBuy
+    money = Lobby.GetMoney(userid)
+  File "./Lobby.py", line 5, in GetMoney
+    strkey = Config.KEY_PACKAGE.format(userid=userid)
+KeyError: 'datetime'
+[pid: 11025|app: 0|req: 2/2] 192.168.3.53 () {38 vars in 701 bytes} [Fri May 10 19:33:46 2024] POST /shop/buy?userid=16738588002&propid=1001&propnum=12&shopversion=10000&version=10000 => generated 4 bytes in 3 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 11027)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 19:35:12 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:35787 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x55c4b48a9600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 11172)
+spawned uWSGI worker 1 (pid: 11174, cores: 2)
+spawned uWSGI worker 2 (pid: 11175, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 11176)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55c4b48a9600 pid: 11175 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55c4b48a9600 pid: 11174 (default app)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:35:21.238553' WHERE userid='16738588002'
+[pid: 11174|app: 0|req: 1/1] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 19:35:21 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 22 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+2##################################
+3##################################
+4##################################
+5##################################
+6##################################
+7##################################
+8##################################
+100
+9##################################
+2024-05-10 19:35:23|ERROR|app.py:45|'datetime'
+Traceback (most recent call last):
+  File "app.py", line 43, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 54, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 133, in POST
+    dictInfo = Shop.ShopBuy(userid , propid , propnum, shopversion, version)
+  File "./Shop.py", line 71, in ShopBuy
+    money = Lobby.GetMoney(userid)
+  File "./Lobby.py", line 5, in GetMoney
+    strkey = Config.KEY_PACKAGE.format(userid=userid)
+KeyError: 'datetime'
+[pid: 11174|app: 0|req: 2/2] 192.168.3.53 () {38 vars in 701 bytes} [Fri May 10 19:35:23 2024] POST /shop/buy?userid=16738588002&propid=1001&propnum=12&shopversion=10000&version=10000 => generated 4 bytes in 3 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 11176)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 19:37:24 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:37495 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x55d4af0fd600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 11360)
+spawned uWSGI worker 1 (pid: 11361, cores: 2)
+spawned uWSGI worker 2 (pid: 11362, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 11363)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55d4af0fd600 pid: 11362 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55d4af0fd600 pid: 11361 (default app)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:37:28.703087' WHERE userid='16738588002'
+[pid: 11361|app: 0|req: 1/1] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 19:37:28 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 26 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+2##################################
+3##################################
+4##################################
+5##################################
+6##################################
+7##################################
+8##################################
+100
+9##################################
+2024-05-10 19:37:31|ERROR|app.py:45|'datetime'
+Traceback (most recent call last):
+  File "app.py", line 43, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 54, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 133, in POST
+    dictInfo = Shop.ShopBuy(userid , propid , propnum, shopversion, version)
+  File "./Shop.py", line 71, in ShopBuy
+    money = Lobby.GetMoney(userid)
+  File "./Lobby.py", line 5, in GetMoney
+    strkey = Config.KEY_PACKAGE.format(userid=userid)
+KeyError: 'datetime'
+[pid: 11361|app: 0|req: 2/2] 192.168.3.53 () {38 vars in 701 bytes} [Fri May 10 19:37:31 2024] POST /shop/buy?userid=16738588002&propid=1001&propnum=12&shopversion=10000&version=10000 => generated 4 bytes in 2 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 11363)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 19:41:21 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:44095 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x558fe320c600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 11579)
+spawned uWSGI worker 1 (pid: 11581, cores: 2)
+spawned uWSGI worker 2 (pid: 11582, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 11583)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x558fe320c600 pid: 11582 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x558fe320c600 pid: 11581 (default app)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:41:27.576899' WHERE userid='16738588002'
+[pid: 11582|app: 0|req: 1/1] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 19:41:27 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 33 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+2##################################
+3##################################
+4##################################
+5##################################
+6##################################
+7##################################
+8##################################
+100
+9##################################
+0.0 (1): SELECT * FROM package WHERE userid='16738588002'
+2024-05-10 19:41:29|ERROR|app.py:45|already passed 0
+Traceback (most recent call last):
+  File "app.py", line 43, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 54, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 133, in POST
+    dictInfo = Shop.ShopBuy(userid , propid , propnum, shopversion, version)
+  File "./Shop.py", line 71, in ShopBuy
+    money = Lobby.GetMoney(userid)
+  File "./Lobby.py", line 13, in GetMoney
+    'coin':result[0]['coin'],
+  File "/usr/local/lib/python2.7/dist-packages/web/db.py", line 536, in __getitem__
+    raise IndexError("already passed " + str(i))
+IndexError: already passed 0
+[pid: 11582|app: 0|req: 2/2] 192.168.3.53 () {38 vars in 701 bytes} [Fri May 10 19:41:29 2024] POST /shop/buy?userid=16738588002&propid=1001&propnum=12&shopversion=10000&version=10000 => generated 4 bytes in 19 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 11583)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 19:47:26 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:45083 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x5600b0aef600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 11906)
+spawned uWSGI worker 1 (pid: 11908, cores: 2)
+spawned uWSGI worker 2 (pid: 11909, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 11910)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5600b0aef600 pid: 11909 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5600b0aef600 pid: 11908 (default app)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:47:34.141600' WHERE userid='16738588002'
+[pid: 11908|app: 0|req: 1/1] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 19:47:34 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 30 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+2##################################
+3##################################
+4##################################
+5##################################
+6##################################
+7##################################
+8##################################
+100
+9##################################
+0.0 (1): SELECT * FROM package WHERE userid='16738588002'
+2024-05-10 19:47:37|ERROR|app.py:45|Invalid input of type: 'datetime'. Convert to a bytes, string, int or float first.
+Traceback (most recent call last):
+  File "app.py", line 43, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 54, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 133, in POST
+    dictInfo = Shop.ShopBuy(userid , propid , propnum, shopversion, version)
+  File "./Shop.py", line 71, in ShopBuy
+    money = Lobby.GetMoney(userid)
+  File "./Lobby.py", line 22, in GetMoney
+    Config.grds.hmset(strkey, packageinfo)
+  File "/home/slx/.local/lib/python2.7/site-packages/redis/client.py", line 3075, in hmset
+    return self.execute_command('HMSET', name, *items)
+  File "/home/slx/.local/lib/python2.7/site-packages/redis/client.py", line 900, in execute_command
+    conn.send_command(*args)
+  File "/home/slx/.local/lib/python2.7/site-packages/redis/connection.py", line 725, in send_command
+    self.send_packed_command(self.pack_command(*args),
+  File "/home/slx/.local/lib/python2.7/site-packages/redis/connection.py", line 775, in pack_command
+    for arg in imap(self.encoder.encode, args):
+  File "/home/slx/.local/lib/python2.7/site-packages/redis/connection.py", line 120, in encode
+    "bytes, string, int or float first." % typename)
+DataError: Invalid input of type: 'datetime'. Convert to a bytes, string, int or float first.
+[pid: 11909|app: 0|req: 1/2] 192.168.3.53 () {38 vars in 701 bytes} [Fri May 10 19:47:37 2024] POST /shop/buy?userid=16738588002&propid=1001&propnum=12&shopversion=10000&version=10000 => generated 4 bytes in 24 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 11910)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 19:53:28 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:37529 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x563987884600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 12180)
+spawned uWSGI worker 1 (pid: 12181, cores: 2)
+spawned uWSGI worker 2 (pid: 12182, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 12183)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x563987884600 pid: 12182 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x563987884600 pid: 12181 (default app)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:53:33.935295' WHERE userid='16738588002'
+[pid: 12182|app: 0|req: 1/1] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 19:53:33 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 30 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+2##################################
+3##################################
+4##################################
+5##################################
+6##################################
+7##################################
+8##################################
+100
+9##################################
+0.0 (1): SELECT * FROM package WHERE userid='16738588002'
+2024-05-10 19:53:35|ERROR|app.py:45|Invalid input of type: 'datetime'. Convert to a bytes, string, int or float first.
+Traceback (most recent call last):
+  File "app.py", line 43, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 54, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 133, in POST
+    dictInfo = Shop.ShopBuy(userid , propid , propnum, shopversion, version)
+  File "./Shop.py", line 71, in ShopBuy
+    money = Lobby.GetMoney(userid)
+  File "./Lobby.py", line 22, in GetMoney
+    Config.grds.hmset(strkey, packageinfo)
+  File "/home/slx/.local/lib/python2.7/site-packages/redis/client.py", line 3075, in hmset
+    return self.execute_command('HMSET', name, *items)
+  File "/home/slx/.local/lib/python2.7/site-packages/redis/client.py", line 900, in execute_command
+    conn.send_command(*args)
+  File "/home/slx/.local/lib/python2.7/site-packages/redis/connection.py", line 725, in send_command
+    self.send_packed_command(self.pack_command(*args),
+  File "/home/slx/.local/lib/python2.7/site-packages/redis/connection.py", line 775, in pack_command
+    for arg in imap(self.encoder.encode, args):
+  File "/home/slx/.local/lib/python2.7/site-packages/redis/connection.py", line 120, in encode
+    "bytes, string, int or float first." % typename)
+DataError: Invalid input of type: 'datetime'. Convert to a bytes, string, int or float first.
+[pid: 12181|app: 0|req: 1/2] 192.168.3.53 () {38 vars in 701 bytes} [Fri May 10 19:53:35 2024] POST /shop/buy?userid=16738588002&propid=1001&propnum=12&shopversion=10000&version=10000 => generated 4 bytes in 24 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 12183)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 19:54:02 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:39629 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x556e50cc3600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 12299)
+spawned uWSGI worker 1 (pid: 12300, cores: 2)
+spawned uWSGI worker 2 (pid: 12301, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 12302)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x556e50cc3600 pid: 12301 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x556e50cc3600 pid: 12300 (default app)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:54:08.192702' WHERE userid='16738588002'
+[pid: 12301|app: 0|req: 1/1] 192.168.3.53 () {38 vars in 624 bytes} [Fri May 10 19:54:08 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 24 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+2##################################
+3##################################
+4##################################
+5##################################
+6##################################
+7##################################
+8##################################
+100
+9##################################
+0.0 (1): SELECT * FROM package WHERE userid='16738588002'
+2024-05-10 19:54:10|ERROR|app.py:45|Invalid input of type: 'datetime'. Convert to a bytes, string, int or float first.
+Traceback (most recent call last):
+  File "app.py", line 43, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 54, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 133, in POST
+    dictInfo = Shop.ShopBuy(userid , propid , propnum, shopversion, version)
+  File "./Shop.py", line 71, in ShopBuy
+    money = Lobby.GetMoney(userid)
+  File "./Lobby.py", line 22, in GetMoney
+    Config.grds.hmset(strkey, packageinfo)
+  File "/home/slx/.local/lib/python2.7/site-packages/redis/client.py", line 3075, in hmset
+    return self.execute_command('HMSET', name, *items)
+  File "/home/slx/.local/lib/python2.7/site-packages/redis/client.py", line 900, in execute_command
+    conn.send_command(*args)
+  File "/home/slx/.local/lib/python2.7/site-packages/redis/connection.py", line 725, in send_command
+    self.send_packed_command(self.pack_command(*args),
+  File "/home/slx/.local/lib/python2.7/site-packages/redis/connection.py", line 775, in pack_command
+    for arg in imap(self.encoder.encode, args):
+  File "/home/slx/.local/lib/python2.7/site-packages/redis/connection.py", line 120, in encode
+    "bytes, string, int or float first." % typename)
+DataError: Invalid input of type: 'datetime'. Convert to a bytes, string, int or float first.
+[pid: 12301|app: 0|req: 2/2] 192.168.3.53 () {38 vars in 700 bytes} [Fri May 10 19:54:10 2024] POST /shop/buy?userid=16738588002&propid=1001&propnum=12&shopversion=10000&version=10000 => generated 4 bytes in 17 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+0.0 (1): SELECT count(*) as num FROM user_data WHERE userid='16738588002'
+0.0 (2): INSERT INTO user_data (createtime, idcard, lastlogintime, nick, password, phonenum, secpassword, sex, status, userid) VALUES ('2024-05-10T19:55:02.229688', '370481200212292616', '2024-05-10T19:55:02.229688', 'slx', 'Slx123456?', '16738588002', '123456', '1', 0, 16738588002)
+0.0 (3): SELECT last_insert_id();
+0.0 (4): INSERT INTO package (coin, freshtime, money, prop_1001, prop_1002, prop_1003, prop_1006, prop_1007, userid) VALUES (0, '2024-05-10 19:55:02.229688', 10000, 0, 0, 0, 0, 0, '16738588002')
+0.0 (5): SELECT last_insert_id();
+[pid: 12301|app: 0|req: 3/3] 192.168.3.53 () {38 vars in 717 bytes} [Fri May 10 19:55:02 2024] POST /register?phonenum=16738588002&password=Slx123456?&nick=slx&sex=1&idcard=370481200212292616 => generated 11 bytes in 27 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:55:04.500146' WHERE userid='16738588002'
+[pid: 12301|app: 0|req: 4/4] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 19:55:04 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 24 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+[pid: 12300|app: 0|req: 1/5] 192.168.3.53 () {36 vars in 561 bytes} [Fri May 10 19:55:09 2024] GET /shop/cfg?version=10000 => generated 1361 bytes in 3 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+2##################################
+3##################################
+4##################################
+5##################################
+6##################################
+7##################################
+8##################################
+100
+9##################################
+2024-05-10 19:55:11|ERROR|app.py:45|get() takes exactly 2 arguments (3 given)
+Traceback (most recent call last):
+  File "app.py", line 43, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 54, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 133, in POST
+    dictInfo = Shop.ShopBuy(userid , propid , propnum, shopversion, version)
+  File "./Shop.py", line 71, in ShopBuy
+    money = Lobby.GetMoney(userid)
+  File "./Lobby.py", line 8, in GetMoney
+    money = Config.grds.get(strkey, 'money')
+TypeError: get() takes exactly 2 arguments (3 given)
+[pid: 12300|app: 0|req: 2/6] 192.168.3.53 () {38 vars in 701 bytes} [Fri May 10 19:55:11 2024] POST /shop/buy?userid=16738588002&propid=1001&propnum=12&shopversion=10000&version=10000 => generated 4 bytes in 2 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 12302)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 19:56:44 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:34727 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x56306a5a8600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 12544)
+spawned uWSGI worker 1 (pid: 12545, cores: 2)
+spawned uWSGI worker 2 (pid: 12546, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 12547)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x56306a5a8600 pid: 12545 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x56306a5a8600 pid: 12546 (default app)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:56:59.083316' WHERE userid='16738588002'
+[pid: 12546|app: 0|req: 1/1] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 19:56:59 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 26 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 12547)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 19:57:04 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:42655 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x55807816a600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 12639)
+spawned uWSGI worker 1 (pid: 12641, cores: 2)
+spawned uWSGI worker 2 (pid: 12642, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 12643)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55807816a600 pid: 12642 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55807816a600 pid: 12641 (default app)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:57:08.442622' WHERE userid='16738588002'
+[pid: 12641|app: 0|req: 1/1] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 19:57:08 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 22 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+2##################################
+3##################################
+4##################################
+5##################################
+6##################################
+7##################################
+8##################################
+100
+9##################################
+0.0 (1): UPDATE package SET freshtime = '2024-05-10 19:57:11.125007', money = 9900 WHERE userid = '16738588002'
+[pid: 12642|app: 0|req: 1/2] 192.168.3.53 () {38 vars in 701 bytes} [Fri May 10 19:57:11 2024] POST /shop/buy?userid=16738588002&propid=1001&propnum=12&shopversion=10000&version=10000 => generated 4 bytes in 27 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 12643)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 19:58:21 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:35171 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x561695c33600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 12792)
+spawned uWSGI worker 1 (pid: 12794, cores: 2)
+spawned uWSGI worker 2 (pid: 12795, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 12796)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x561695c33600 pid: 12794 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x561695c33600 pid: 12795 (default app)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T19:58:26.403215' WHERE userid='16738588002'
+[pid: 12795|app: 0|req: 1/1] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 19:58:26 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 26 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+2##################################
+3##################################
+4##################################
+5##################################
+6##################################
+7##################################
+8##################################
+100
+9##################################
+0.0 (1): UPDATE package SET freshtime = '2024-05-10 19:58:28.519774', money = 9800 WHERE userid = '16738588002'
+[pid: 12794|app: 0|req: 1/2] 192.168.3.53 () {38 vars in 701 bytes} [Fri May 10 19:58:28 2024] POST /shop/buy?userid=16738588002&propid=1001&propnum=12&shopversion=10000&version=10000 => generated 12 bytes in 26 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 12796)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 20:00:57 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:36955 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x55f260e00600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 12953)
+spawned uWSGI worker 1 (pid: 12955, cores: 2)
+spawned uWSGI worker 2 (pid: 12956, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 12957)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55f260e00600 pid: 12955 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55f260e00600 pid: 12956 (default app)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T20:01:00.747599' WHERE userid='16738588002'
+[pid: 12956|app: 0|req: 1/1] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 20:01:00 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 23 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+2##################################
+3##################################
+4##################################
+5##################################
+6##################################
+7##################################
+8##################################
+100
+9##################################
+0.0 (1): UPDATE package SET freshtime = '2024-05-10 20:01:02.405319', money = 9700 WHERE userid = '16738588002'
+[pid: 12956|app: 0|req: 2/2] 192.168.3.53 () {38 vars in 701 bytes} [Fri May 10 20:01:02 2024] POST /shop/buy?userid=16738588002&propid=1001&propnum=12&shopversion=10000&version=10000 => generated 42 bytes in 20 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 1)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 12957)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.25.1 (64bit) on [Fri May 10 20:01:32 2024] ***
+compiled with version: 9.4.0 on 21 April 2024 10:54:01
+os: Linux-5.15.0-105-generic #115~20.04.1-Ubuntu SMP Mon Apr 15 17:33:04 UTC 2024
+nodename: slx-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/slx/py/uwsgi
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/slx/py/uwsgi
+your processes number limit is 15187
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:39267 (port auto-assigned) fd 3
+Python version: 2.7.18 (default, Jan 31 2024, 16:23:13)  [GCC 9.4.0]
+Python main interpreter initialized at 0x561beee9c600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 13084)
+spawned uWSGI worker 1 (pid: 13086, cores: 2)
+spawned uWSGI worker 2 (pid: 13087, cores: 2)
+*** Stats server enabled on 127.0.0.1:8001 fd: 14 ***
+spawned uWSGI http 1 (pid: 13088)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x561beee9c600 pid: 13086 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x561beee9c600 pid: 13087 (default app)
+0.0 (1): SELECT password FROM user_data WHERE userid='16738588002'
+0.0 (2): UPDATE user_data SET lastlogintime = '2024-05-10T20:01:37.024227' WHERE userid='16738588002'
+[pid: 13087|app: 0|req: 1/1] 192.168.3.53 () {38 vars in 625 bytes} [Fri May 10 20:01:37 2024] POST /login?userid=16738588002&password=Slx123456? => generated 11 bytes in 26 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)
+2##################################
+3##################################
+4##################################
+5##################################
+6##################################
+7##################################
+8##################################
+100
+9##################################
+0.0 (1): UPDATE package SET freshtime = '2024-05-10 20:01:39.223552', money = 9600 WHERE userid = '16738588002'
+[pid: 13086|app: 0|req: 1/2] 192.168.3.53 () {38 vars in 701 bytes} [Fri May 10 20:01:39 2024] POST /shop/buy?userid=16738588002&propid=1001&propnum=12&shopversion=10000&version=10000 => generated 31 bytes in 23 msecs (HTTP/1.1 200) 1 headers in 147 bytes (2 switches on core 0)

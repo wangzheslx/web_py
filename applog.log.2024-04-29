@@ -1,0 +1,7 @@
+2024-04-28 13:43:36|ERROR|app.py:36|invalid literal for int() with base 10: ''
+Traceback (most recent call last):
+  File "app.py", line 34, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 96, in GET
+    version = int(req.version)
+ValueError: invalid literal for int() with base 10: ''
