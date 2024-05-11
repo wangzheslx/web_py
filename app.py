@@ -16,8 +16,6 @@ urls = (
     '/login', 'Login', 
     '/shop/cfg','Shop_cfg',
     '/shop/buy', 'Shop_buy',
-
-
 )
 
 app = web.application(urls, globals())
@@ -58,9 +56,9 @@ def CheckLogin(func):
             
 
 class hello:
-    def GET(self, name):
-        if not name:
-            name = "World!"
+    @CatchError
+    def GET(self):
+        name = "World!"
         return 'Hello, '+name
     
 class Register:

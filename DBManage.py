@@ -32,3 +32,13 @@ def UpdateMoney(userid, money, now):
         money = money,
         freshtime = str(now),    
     )
+
+def UpdateProp(userid, propdict, now):
+    propstr = ""
+    for k, v in propdict.items():
+        # 注意末尾多了一个字符 ”  ，“
+        propstr+=str(k)+"="+str(v)+","
+    Config.gdb.query(
+    "update package set {propstr} freshtime = '{now}' where userid = {userid}".format(propstr=propstr, now = now, userid = userid)  
+    )
+    

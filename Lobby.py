@@ -5,6 +5,7 @@ def GetMoney(userid):
     strkey = Config.KEY_PACKAGE.format(userid=userid)
     money = 0
     if Config.grds.exists(strkey):
+        # 接受键值要传hget 哈希方法
         money = Config.grds.hget(strkey, 'money')
     else:
         result = Config.gdb.select('package', what = "*", where="userid=$userid", vars=dict(userid=userid))

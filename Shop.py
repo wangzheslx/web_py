@@ -56,7 +56,7 @@ def ShopBuy(userid , propid , propnum, shopversion, version):
         return{'code': ErrorCfg.EC_SHOP_BUY_INVENTORY_NOT_ENOUGH,'reason': ErrorCfg.ER_SHOP_BUY_INVENTORY_NOT_ENOUGH}
     ##############################################
     # 购买redis 保证购买的原子性
-    needmoney = int(math.floor(cfg['money'] * cfg['discount']))
+    needmoney = int(math.floor(cfg['money'] * cfg['discount']* propnum))
 
     # 获取金额
     
@@ -68,11 +68,27 @@ def ShopBuy(userid , propid , propnum, shopversion, version):
     strkey = Config.KEY_PACKAGE.format(userid=userid)
 
     # 原子性保证
+
+    ## 另类方法 使用乐观锁和版本号字段
     money = Config.grds.hincrby(strkey, 'money', -needmoney)
     if money < 0:
         Config.grds.hincrby(strkey, 'money', needmoney)
         return {'code' : ErrorCfg.EC_SHOP_BUY_MONEY_NOT_ENOUGH, 'reason' : ErrorCfg.ER_SHOP_BUY_MONEY_NOT_ENOUGH}
     now = datetime.datetime.now()
     DBManage.UpdateMoney(userid, money, now)
-    return {"return money ":{money}}
+    
     # 发货
+    PresentProp(userid, propid, propnum)
+    return {"code": 0, "money":money}
+
+def PresentProp(userid, propid, propnum):
+    strkey = Config.KEY_PACKAGE.format(userid=userid)
+    proplist = ShopCfg.SHOP_CFG[propid]["proplist"]
+    now = datetime.datetime.now()
+    propdic = {}
+    for prop in proplist:
+        propid = "prop_"+ str(prop["id"])
+        singlepropnum = Config.grds.hincrby(strkey, propid, prop["num"]* propnum)
+        propdic[propid] = singlepropnum
+    Config.grds.hset(strkey, 'freshtime', str(now))
+    DBManage.UpdateProp(userid, propdic, now)

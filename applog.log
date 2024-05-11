@@ -1,197 +1,39 @@
-2024-05-10 18:43:48|ERROR|app.py:45|'datetime'
+2024-05-11 16:42:36|ERROR|app.py:43|'userid'
 Traceback (most recent call last):
-  File "app.py", line 43, in wrapper
+  File "app.py", line 41, in wrapper
     return func(*args,**kwargs)
-  File "app.py", line 92, in POST
-    Account.InitUser(phonenum, password, nick, sex, idcard)
-  File "./Account.py", line 116, in InitUser
-    strKey = Config.KEY_PACKAGE.format(userid = phonenum)
-KeyError: 'datetime'
-2024-05-10 18:48:40|ERROR|app.py:45|(1054, "Unknown column 'prop_1006' in 'field list'")
-Traceback (most recent call last):
-  File "app.py", line 43, in wrapper
+  File "app.py", line 52, in wrapper
     return func(*args,**kwargs)
-  File "app.py", line 92, in POST
-    Account.InitUser(phonenum, password, nick, sex, idcard)
-  File "./Account.py", line 132, in InitUser
-    DBManage.InitPackage(packageinfo)
-  File "./DBManage.py", line 23, in InitPackage
-    **packageinfo
-  File "/usr/local/lib/python2.7/dist-packages/web/db.py", line 1016, in insert
-    self._db_execute(db_cursor, q1)
-  File "/usr/local/lib/python2.7/dist-packages/web/db.py", line 771, in _db_execute
-    out = cur.execute(query, params)
-  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 209, in execute
-    res = self._query(query)
-  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 315, in _query
-    db.query(q)
-  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/connections.py", line 239, in query
-    _mysql.connection.query(self, query)
-OperationalError: (1054, "Unknown column 'prop_1006' in 'field list'")
-2024-05-10 18:59:14|ERROR|app.py:45|'module' object is not callable
-Traceback (most recent call last):
-  File "app.py", line 43, in wrapper
-    return func(*args,**kwargs)
-  File "app.py", line 54, in wrapper
-    return func(*args,**kwargs)
-  File "app.py", line 134, in GET
-    return json({'code': 0})
-TypeError: 'module' object is not callable
-2024-05-10 19:10:47|ERROR|app.py:45|local variable 'needmoney' referenced before assignment
-Traceback (most recent call last):
-  File "app.py", line 43, in wrapper
-    return func(*args,**kwargs)
-  File "app.py", line 54, in wrapper
-    return func(*args,**kwargs)
-  File "app.py", line 133, in GET
+  File "app.py", line 131, in POST
     dictInfo = Shop.ShopBuy(userid , propid , propnum, shopversion, version)
-  File "./Shop.py", line 42, in ShopBuy
-    print(needmoney)
-UnboundLocalError: local variable 'needmoney' referenced before assignment
-2024-05-10 19:27:41|ERROR|app.py:45|u'1001'
+  File "./Shop.py", line 79, in ShopBuy
+    PresentProp(userid, propid, propnum)
+  File "./Shop.py", line 83, in PresentProp
+    strkey = Config.KEY_PACKAGE.format(userid)
+KeyError: 'userid'
+2024-05-11 16:45:28|ERROR|app.py:43|'int' object has no attribute '__getitem__'
 Traceback (most recent call last):
-  File "app.py", line 43, in wrapper
+  File "app.py", line 41, in wrapper
     return func(*args,**kwargs)
-  File "app.py", line 54, in wrapper
+  File "app.py", line 52, in wrapper
     return func(*args,**kwargs)
-  File "app.py", line 133, in GET
+  File "app.py", line 131, in POST
     dictInfo = Shop.ShopBuy(userid , propid , propnum, shopversion, version)
-  File "./Shop.py", line 52, in ShopBuy
-    cfg = ShopCfg.SHOP_CFG[propid]
-KeyError: u'1001'
-2024-05-10 19:33:46|ERROR|app.py:45|'datetime'
+  File "./Shop.py", line 79, in ShopBuy
+    PresentProp(userid, propid, propnum)
+  File "./Shop.py", line 88, in PresentProp
+    propid = "prop_"+ str(propid["id"])
+TypeError: 'int' object has no attribute '__getitem__'
+2024-05-11 16:47:19|ERROR|app.py:43|'id'
 Traceback (most recent call last):
-  File "app.py", line 43, in wrapper
+  File "app.py", line 41, in wrapper
     return func(*args,**kwargs)
-  File "app.py", line 54, in wrapper
+  File "app.py", line 52, in wrapper
     return func(*args,**kwargs)
-  File "app.py", line 133, in POST
+  File "app.py", line 131, in POST
     dictInfo = Shop.ShopBuy(userid , propid , propnum, shopversion, version)
-  File "./Shop.py", line 71, in ShopBuy
-    money = Lobby.GetMoney(userid)
-  File "./Lobby.py", line 5, in GetMoney
-    strkey = Config.KEY_PACKAGE.format(userid=userid)
-KeyError: 'datetime'
-2024-05-10 19:35:23|ERROR|app.py:45|'datetime'
-Traceback (most recent call last):
-  File "app.py", line 43, in wrapper
-    return func(*args,**kwargs)
-  File "app.py", line 54, in wrapper
-    return func(*args,**kwargs)
-  File "app.py", line 133, in POST
-    dictInfo = Shop.ShopBuy(userid , propid , propnum, shopversion, version)
-  File "./Shop.py", line 71, in ShopBuy
-    money = Lobby.GetMoney(userid)
-  File "./Lobby.py", line 5, in GetMoney
-    strkey = Config.KEY_PACKAGE.format(userid=userid)
-KeyError: 'datetime'
-2024-05-10 19:37:31|ERROR|app.py:45|'datetime'
-Traceback (most recent call last):
-  File "app.py", line 43, in wrapper
-    return func(*args,**kwargs)
-  File "app.py", line 54, in wrapper
-    return func(*args,**kwargs)
-  File "app.py", line 133, in POST
-    dictInfo = Shop.ShopBuy(userid , propid , propnum, shopversion, version)
-  File "./Shop.py", line 71, in ShopBuy
-    money = Lobby.GetMoney(userid)
-  File "./Lobby.py", line 5, in GetMoney
-    strkey = Config.KEY_PACKAGE.format(userid=userid)
-KeyError: 'datetime'
-2024-05-10 19:41:29|ERROR|app.py:45|already passed 0
-Traceback (most recent call last):
-  File "app.py", line 43, in wrapper
-    return func(*args,**kwargs)
-  File "app.py", line 54, in wrapper
-    return func(*args,**kwargs)
-  File "app.py", line 133, in POST
-    dictInfo = Shop.ShopBuy(userid , propid , propnum, shopversion, version)
-  File "./Shop.py", line 71, in ShopBuy
-    money = Lobby.GetMoney(userid)
-  File "./Lobby.py", line 13, in GetMoney
-    'coin':result[0]['coin'],
-  File "/usr/local/lib/python2.7/dist-packages/web/db.py", line 536, in __getitem__
-    raise IndexError("already passed " + str(i))
-IndexError: already passed 0
-2024-05-10 19:47:37|ERROR|app.py:45|Invalid input of type: 'datetime'. Convert to a bytes, string, int or float first.
-Traceback (most recent call last):
-  File "app.py", line 43, in wrapper
-    return func(*args,**kwargs)
-  File "app.py", line 54, in wrapper
-    return func(*args,**kwargs)
-  File "app.py", line 133, in POST
-    dictInfo = Shop.ShopBuy(userid , propid , propnum, shopversion, version)
-  File "./Shop.py", line 71, in ShopBuy
-    money = Lobby.GetMoney(userid)
-  File "./Lobby.py", line 22, in GetMoney
-    Config.grds.hmset(strkey, packageinfo)
-  File "/home/slx/.local/lib/python2.7/site-packages/redis/client.py", line 3075, in hmset
-    return self.execute_command('HMSET', name, *items)
-  File "/home/slx/.local/lib/python2.7/site-packages/redis/client.py", line 900, in execute_command
-    conn.send_command(*args)
-  File "/home/slx/.local/lib/python2.7/site-packages/redis/connection.py", line 725, in send_command
-    self.send_packed_command(self.pack_command(*args),
-  File "/home/slx/.local/lib/python2.7/site-packages/redis/connection.py", line 775, in pack_command
-    for arg in imap(self.encoder.encode, args):
-  File "/home/slx/.local/lib/python2.7/site-packages/redis/connection.py", line 120, in encode
-    "bytes, string, int or float first." % typename)
-DataError: Invalid input of type: 'datetime'. Convert to a bytes, string, int or float first.
-2024-05-10 19:53:35|ERROR|app.py:45|Invalid input of type: 'datetime'. Convert to a bytes, string, int or float first.
-Traceback (most recent call last):
-  File "app.py", line 43, in wrapper
-    return func(*args,**kwargs)
-  File "app.py", line 54, in wrapper
-    return func(*args,**kwargs)
-  File "app.py", line 133, in POST
-    dictInfo = Shop.ShopBuy(userid , propid , propnum, shopversion, version)
-  File "./Shop.py", line 71, in ShopBuy
-    money = Lobby.GetMoney(userid)
-  File "./Lobby.py", line 22, in GetMoney
-    Config.grds.hmset(strkey, packageinfo)
-  File "/home/slx/.local/lib/python2.7/site-packages/redis/client.py", line 3075, in hmset
-    return self.execute_command('HMSET', name, *items)
-  File "/home/slx/.local/lib/python2.7/site-packages/redis/client.py", line 900, in execute_command
-    conn.send_command(*args)
-  File "/home/slx/.local/lib/python2.7/site-packages/redis/connection.py", line 725, in send_command
-    self.send_packed_command(self.pack_command(*args),
-  File "/home/slx/.local/lib/python2.7/site-packages/redis/connection.py", line 775, in pack_command
-    for arg in imap(self.encoder.encode, args):
-  File "/home/slx/.local/lib/python2.7/site-packages/redis/connection.py", line 120, in encode
-    "bytes, string, int or float first." % typename)
-DataError: Invalid input of type: 'datetime'. Convert to a bytes, string, int or float first.
-2024-05-10 19:54:10|ERROR|app.py:45|Invalid input of type: 'datetime'. Convert to a bytes, string, int or float first.
-Traceback (most recent call last):
-  File "app.py", line 43, in wrapper
-    return func(*args,**kwargs)
-  File "app.py", line 54, in wrapper
-    return func(*args,**kwargs)
-  File "app.py", line 133, in POST
-    dictInfo = Shop.ShopBuy(userid , propid , propnum, shopversion, version)
-  File "./Shop.py", line 71, in ShopBuy
-    money = Lobby.GetMoney(userid)
-  File "./Lobby.py", line 22, in GetMoney
-    Config.grds.hmset(strkey, packageinfo)
-  File "/home/slx/.local/lib/python2.7/site-packages/redis/client.py", line 3075, in hmset
-    return self.execute_command('HMSET', name, *items)
-  File "/home/slx/.local/lib/python2.7/site-packages/redis/client.py", line 900, in execute_command
-    conn.send_command(*args)
-  File "/home/slx/.local/lib/python2.7/site-packages/redis/connection.py", line 725, in send_command
-    self.send_packed_command(self.pack_command(*args),
-  File "/home/slx/.local/lib/python2.7/site-packages/redis/connection.py", line 775, in pack_command
-    for arg in imap(self.encoder.encode, args):
-  File "/home/slx/.local/lib/python2.7/site-packages/redis/connection.py", line 120, in encode
-    "bytes, string, int or float first." % typename)
-DataError: Invalid input of type: 'datetime'. Convert to a bytes, string, int or float first.
-2024-05-10 19:55:11|ERROR|app.py:45|get() takes exactly 2 arguments (3 given)
-Traceback (most recent call last):
-  File "app.py", line 43, in wrapper
-    return func(*args,**kwargs)
-  File "app.py", line 54, in wrapper
-    return func(*args,**kwargs)
-  File "app.py", line 133, in POST
-    dictInfo = Shop.ShopBuy(userid , propid , propnum, shopversion, version)
-  File "./Shop.py", line 71, in ShopBuy
-    money = Lobby.GetMoney(userid)
-  File "./Lobby.py", line 8, in GetMoney
-    money = Config.grds.get(strkey, 'money')
-TypeError: get() takes exactly 2 arguments (3 given)
+  File "./Shop.py", line 79, in ShopBuy
+    PresentProp(userid, propid, propnum)
+  File "./Shop.py", line 88, in PresentProp
+    propid = "prop_"+ str(propdic["id"])
+KeyError: 'id'
