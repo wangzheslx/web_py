@@ -1,5 +1,8 @@
 #-*- coding:utf-8 -*-
 import Config
+import datetime
+
+
 
 def GetMoney(userid):
     strkey = Config.KEY_PACKAGE.format(userid=userid)
@@ -24,3 +27,15 @@ def GetMoney(userid):
         Config.grds.expire(strkey, 30 * 24 * 60 * 60)
         money = int(packageinfo['money'])
     return money
+
+# 传datetime.date.today()
+def GetMonday(today):
+    today = datetime.datetime.strptime(str(today), "%Y-%m-%d")
+    return datetime.datetime.strftime(today - datetime.timedelta(today.weekday()), "%Y_%m_%d")
+
+# 传datetime.datetime.now()
+# def GetMonday(today):
+#     today = datetime.datetime.strptime(str(today), "%Y-%m-%d %H:%M:%S.%f")
+#     monday = today - datetime.timedelta(days=today.weekday())
+#     return datetime.datetime.strftime(monday, "%Y_%m_%d")
+

@@ -6,6 +6,7 @@ import math
 import Lobby
 import Config
 import DBManage
+import Account
 
 
 
@@ -78,8 +79,29 @@ def ShopBuy(userid , propid , propnum, shopversion, version):
     DBManage.UpdateMoney(userid, money, now)
     
     # 发货
-    PresentProp(userid, propid, propnum)
+    Present(userid, propid, propnum)
+    # PresentProp(userid, propid, propnum)##################################################
     return {"code": 0, "money":money}
+
+def Present(userid, presentid, presentnum):
+    # 根据发送列表， 根据道具ID，调用对应的函数发送奖励
+    if presentid in ShopCfg.SHOP_LIST:
+        PresentProp(userid, presentid, presentnum)
+    elif presentid == Config.MONEY_ID:
+        PresentMoney(userid, presentnum)
+    
+
+
+def PresentMoney(userid, money):
+    now = datetime.datetime.now()
+    Account.InitPackage(userid, now)
+    strkey = Config.KEY_PACKAGE.format(userid = userid)
+    remoney = Config.grds.hincrby(strkey,'money', money)
+    if remoney < 0:
+        Config.grds.hincrby(strkey,'money', -money)
+        return {'code' : ErrorCfg.EC_TASK_REWARD_PRESENT_ERROR, 'reason' : ErrorCfg.ER_TASK_REWARD_PRESENT_ERROR}
+    DBManage.UpdateMoney(userid, remoney, now)
+    return {"code": 0, "money":remoney}
 
 def PresentProp(userid, propid, propnum):
     strkey = Config.KEY_PACKAGE.format(userid=userid)
@@ -92,3 +114,4 @@ def PresentProp(userid, propid, propnum):
         propdic[propid] = singlepropnum
     Config.grds.hset(strkey, 'freshtime', str(now))
     DBManage.UpdateProp(userid, propdic, now)
+    return {"code":0, "propthing": "ok"}

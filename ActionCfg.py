@@ -1,0 +1,20 @@
+#-*- coding: utf-8 -*-
+
+# 事件的消息队列,redis当中使用的键名
+
+KEY_ACTION_LIST = "KEY_ACTION_LIST"
+#blpop 阻塞弹出
+
+# 事件列表的元素
+KEY_ACTION_TASK_LIST = "KEY_ACTION_TASK_LIST"
+
+# 事件
+ACTION_SIGN = 1
+ACTION_LOGIN = 2
+ACTION_PLAY = 3
+
+ACTION_MAPPINT = {
+    ACTION_SIGN:[KEY_ACTION_TASK_LIST],
+    ACTION_LOGIN:[KEY_ACTION_TASK_LIST],
+}
+

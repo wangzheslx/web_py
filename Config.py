@@ -2,7 +2,7 @@
 import web
 import redis
 # Mysql配置
-DB_HOST = '192.168.3.103'
+DB_HOST = '192.168.12.248'
 DB_PORT = 3306
 DB_USER = 'root'
 DB_PW = '123456'
@@ -49,3 +49,7 @@ KEY_PACKAGE = "KEY_PACKAGE_{userid}"
 # 登录session
 KEY_LOGIN = "KEY_LOGIN_{userid}"
 
+# 货币代码
+
+MONEY_ID = 800
+COIN_ID = 900

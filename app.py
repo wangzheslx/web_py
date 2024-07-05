@@ -9,6 +9,7 @@ import Config
 import logging
 import logging.config
 import Shop
+import Task
 from RedisStore import RedisStore
 urls = (
     '/', 'hello',
@@ -16,6 +17,10 @@ urls = (
     '/login', 'Login', 
     '/shop/cfg','Shop_cfg',
     '/shop/buy', 'Shop_buy',
+    '/task/cfg','Task_cfg',
+    '/task/reward', 'Task_reward',
+    '/sign', 'Sign',
+
 )
 
 app = web.application(urls, globals())
@@ -132,5 +137,36 @@ class Shop_buy:
         return dictInfo
         
 
+class Task_cfg:
+    @CatchError
+    @CheckLogin
+    def GET(self):
+        req = web.input(userid = '', version = '')
+        userid = int(req.userid)
+        version = int(req.version)
+        tasklist = Task.GetTask(userid, version)
+        return json.dumps({'code' : 0, 'tasklist' :tasklist})
 
 
+class Task_reward:
+    @CatchError
+    @CheckLogin
+    def GET(self):
+        req = web.input(userid = "", taskid = "")
+        userid = int(req.userid)
+        taskid = int(req.taskid)
+        result = Task.TaskReward(userid, taskid)
+        if result['code'] != 0:
+            return Error.ErrResult(result['code'], result['reason'])
+        return json.dumps({'code': 0})
+
+class Sign:
+    @CatchError
+    @CheckLogin
+    def GET(self):
+        req = web.input(userid = "", signtype = "", date = "")
+        userid = int(req.userid)
+        signtype = int(req.signtype)
+        date = req.date
+        Task.UserSign(userid, signtype, date)
+        return json.dumps({'code': 0})

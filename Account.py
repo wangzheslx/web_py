@@ -108,28 +108,62 @@ def CheckPassword(password):
         return True
     return False
 
+def InitPackage(userid, now):
+    strkey = Config.KEY_LOGIN.format(userid = userid)
+    if Config.grds.exists(strkey):
+        return
+    # 从数据库读取（数据库内 存在/不存在）
+    else:
+        result = Config.gdb.select('package', what="*", where="userid = $userid", vars = dict(userid=userid))
+        if result:# 从数据库读取
+            packageinfo = {}
+            # 遍历缓存
+            for k, v in result[0].items():
+                packageinfo[k] = v
+            Config.grds.hmset(strkey, packageinfo)
+            Config.grds.expire(strkey, 30* 24* 60* 60)
+        else:# 初始化
+            packageinfo = {
+                'money':Config.NEWUSER_DEFAULT_MONEY,
+                'coin':0,
+                'prop_1001':0,
+                'prop_1002':0,
+                'prop_1003':0,
+                'prop_1006':0,
+                'prop_1007':0,
+                'freshtime':str(now),# 背包当前时间
+            }
+            Config.grds.hmset(strkey, packageinfo)
+            Config.grds.expire(strkey, 30* 24* 60* 60)
+            packageinfo['userid'] = userid
+            DBManage.InitPackage(packageinfo)
+
+
+
 # 注册用户
 def InitUser(phonenum, password, nick, sex, idcard):
     now = datetime.datetime.now()
     DBManage.InsertRegisterUser(phonenum, password, nick, sex, idcard, now)
-    # 初始化用户背包
-    strKey = Config.KEY_PACKAGE.format(userid = phonenum)
-    packageinfo = {
-        'money':Config.NEWUSER_DEFAULT_MONEY,
-        'coin':0,
-        'prop_1001':0,
-        'prop_1002':0,
-        'prop_1003':0,
-        'prop_1006':0,
-        'prop_1007':0,
-        'freshtime':str(now),# 背包当前时间
-    }
+    # 初始化用户背包 二代
+    InitPackage(phonenum, now)
+    # 一代
+    # strKey = Config.KEY_PACKAGE.format(userid = phonenum)
+    # packageinfo = {
+    #     'money':Config.NEWUSER_DEFAULT_MONEY,
+    #     'coin':0,
+    #     'prop_1001':0,
+    #     'prop_1002':0,
+    #     'prop_1003':0,
+    #     'prop_1006':0,
+    #     'prop_1007':0,
+    #     'freshtime':str(now),# 背包当前时间
+    # }
     
-    # 易于维护
-    Config.grds.hmset(strKey, packageinfo)
-    # 设置了一个 userid 
-    packageinfo['userid'] = phonenum
-    DBManage.InitPackage(packageinfo)
+    # # 易于维护
+    # Config.grds.hmset(strKey, packageinfo)
+    # # 设置了一个 userid 
+    # packageinfo['userid'] = phonenum
+    # DBManage.InitPackage(packageinfo)
 
 
 # 检测用户的登录
