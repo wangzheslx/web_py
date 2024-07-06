@@ -1,8 +1,10 @@
 #-*- coding:utf-8 -*-
 import Config
 import datetime
-
-
+from proto.general_pb2 import Mail
+import ShopCfg
+import json
+import Service
 
 def GetMoney(userid):
     strkey = Config.KEY_PACKAGE.format(userid=userid)
@@ -39,3 +41,70 @@ def GetMonday(today):
 #     monday = today - datetime.timedelta(days=today.weekday())
 #     return datetime.datetime.strftime(monday, "%Y_%m_%d")
 
+def SendMail(mailinfo):
+    if not mailinfo:
+        return
+    mailproto = Mail()
+    for userid in mailinfo['useridlist']:
+        mailinfo.userid.append(userid)
+    mailproto.title = mailinfo['title']
+    mailproto.context = mailinfo['context']
+    mailproto.type = mailinfo['type']
+    attach = {}
+    for propid, propnum in mailinfo['attach'].items():
+        if propid in ShopCfg.SHOP_CFG:
+            attach['propid'] = propnum
+    mailproto.attach = json.dumps(attach)
+    mailproto['getattach'] = 0
+    mailproto['hasattach'] = 0
+    if attach:
+        mailproto['hasattach'] = 1
+    
+    # 之后 发给 邮件服务器#####################################################
+    Service.SendSvrd('ip', 8080 ,mailproto.SerializeToString())
+    #########################################################################
+
+def GetGlobalMail(userid):
+    pass
+
+
+def GetMailList(userid):
+    ## 获取全服邮件
+
+    strKeyList = Config.KEY_MAIL_LIST.format(userid = userid)
+    # 获取redis当中的mail的redis
+    mailidlist = Config.grds.lrange(strKeyList, 0, -1)
+    mailinfolist = []
+    for mailid in mailidlist:
+        strKey = Config.KEY_MAIL_DETAIL.format(mailid = mailid)
+        result = Config.grds.hgetall(strKey)
+        if not result:
+            # 删除strkeylist对应过期的redis列表的当中的数据
+            Config.grds.lrem(strKeyList, mailid, 0)
+            continue
+        mailinfo = {}
+        mailinfo['mailid'] = mailid
+        mailinfo['title'] = result['title']
+        mailinfo['type'] = result['type']
+        mailinfo['getattach'] = result['getattach']
+        mailinfo['context'] = result['context']
+        mailinfolist.append(mailinfo)
+    return mailinfolist
+
+def MailDelete(userid, mailid):
+    strKeyList = Config.KEY_MAIL_LIST.format(userid = userid)
+    Config.grds.lrem(strKeyList, mailid, 0)
+    strKey = Config.KEY_MAIL_DETAIL.format(mailid = mailid)
+    Config.grds.delete(strKey)
+
+def MailDeleteALL(userid):
+    strKeyList = Config.KEY_MAIL_LIST.format(userid = userid)
+    mailidlist = Config.grds.lrange(strKeyList, 0 ,-1)
+    for mailid in mailidlist:
+        strKey = Config.KEY_MAIL_DETAIL.format(mailid = mailid)
+        result = Config.grds.hgetall(strKey)
+        if result['hasattach'] == 0 or result['getattach'] == 1:
+            Config.grds.lrem(strKeyList, mailid, 0)
+            Config.grds.delete(strKey)
+    return {'code':0}
+    

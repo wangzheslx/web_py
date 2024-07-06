@@ -53,3 +53,8 @@ KEY_LOGIN = "KEY_LOGIN_{userid}"
 
 MONEY_ID = 800
 COIN_ID = 900
+
+# 用户邮件列表
+KEY_MAIL_LIST = "KEY_MAIL_LIST_{userid}"
+# 邮件详细信息列表
+KEY_MAIL_DETAIL = "KEY_MAIL_DETAIL_{mailid}"

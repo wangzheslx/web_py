@@ -10,6 +10,8 @@ import logging
 import logging.config
 import Shop
 import Task
+import Lobby
+
 from RedisStore import RedisStore
 urls = (
     '/', 'hello',
@@ -20,6 +22,13 @@ urls = (
     '/task/cfg','Task_cfg',
     '/task/reward', 'Task_reward',
     '/sign', 'Sign',
+    '/mail/send','Mail_send',
+    '/mail/list', 'Mail_list',
+    '/mail/detail','Mail_detail',
+    '/mail/delete', 'Mail_delete',
+    '/mail/getattach','Mail_getattach',
+    '/mail/delete/all', 'Mail_delete_all',
+
 
 )
 
@@ -169,4 +178,51 @@ class Sign:
         signtype = int(req.signtype)
         date = req.date
         Task.UserSign(userid, signtype, date)
+        return json.dumps({'code': 0})
+    
+class Mail_send:
+    @CatchError
+    @CheckLogin
+    def POST(self):
+        req = web.input(useridlist = "", type = "", date = "", tile = "", context = "", attach = "", fromuserid = "", isglobal = "")
+        print(req)
+        # 有什么区别？
+        req.attach = json.loads(req.attach)
+        print(req)
+        Lobby.SendMail(req)
+        
+        return json.dumps({'code': 0})
+    
+
+class Mail_list:
+    @CatchError
+    @CheckLogin
+    def POST(self):
+        req = web.input(userid = "")
+        userid = int(req.userid)
+        mailinfolist = Lobby.GetMailList(userid)
+        return json.dumps({'code': 0, 'mailinfolist':mailinfolist})
+
+
+class Mail_delete:
+    @CatchError
+    @CheckLogin
+    def POST(self):
+        req = web.input(userid = "", mailid = "")
+        userid = int(req.userid)
+        mailid = req.mailid
+        Lobby.MailDelete(userid, mailid)
+        return json.dumps({'code': 0})
+
+
+class Mail_getattach:
+    pass
+
+class Mail_delete_all:
+    @CatchError
+    @CheckLogin
+    def POST(self):
+        req = web.input(userid = "")
+        userid = int(req.userid)
+        Lobby.MailDeleteALL(userid)
         return json.dumps({'code': 0})
