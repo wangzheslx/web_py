@@ -1,0 +1,8 @@
+syntax = "proto2";
+//消息的数据
+
+message Message{
+    optional int64 userid = 1;
+    optional int32 msgid = 2;
+    optional bytes string = 3;//序列化的数据，根据msgid反序列化才能得到元数据 
+}
