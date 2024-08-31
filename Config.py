@@ -32,8 +32,8 @@ RDS_HOST = '127.0.0.1'
 RDS_PORT = 6379
 RDS_PW = '123456'
 # 设置session过期时间
-SESSION_EXPIRETIME = 30
-LOGIN_INVALID_TIME = 30
+SESSION_EXPIRETIME = 30*4
+LOGIN_INVALID_TIME = 30*4
 
 grds = redis.Redis(
     host = RDS_HOST,
@@ -58,3 +58,7 @@ COIN_ID = 900
 KEY_MAIL_LIST = "KEY_MAIL_LIST_{userid}"
 # 邮件详细信息列表
 KEY_MAIL_DETAIL = "KEY_MAIL_DETAIL_{mailid}"
+
+#邮件服务器的IP和端口
+MAIL_HOST = "127.0.0.1"
+MAIL_PORT = 1234

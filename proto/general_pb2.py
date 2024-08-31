@@ -13,7 +13,7 @@ from google.protobuf import descriptor_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='general.proto',
   package='',
-  serialized_pb='\n\rgeneral.proto\"6\n\x04Sign\x12\x0e\n\x06userid\x18\x01 \x01(\x03\x12\x10\n\x08signtype\x18\x02 \x01(\x05\x12\x0c\n\x04\x64\x61te\x18\x03 \x01(\t\"\x8e\x01\n\x04Mail\x12\x0e\n\x06userid\x18\x01 \x01(\x03\x12\r\n\x05title\x18\x02 \x01(\t\x12\x0f\n\x07\x63ontext\x18\x03 \x01(\t\x12\x0c\n\x04type\x18\x04 \x01(\x05\x12\x0e\n\x06\x61ttach\x18\x05 \x01(\t\x12\x12\n\nbuttontext\x18\x06 \x01(\t\x12\x11\n\thasattach\x18\x07 \x01(\t\x12\x11\n\tgetattach\x18\x08 \x01(\t')
+  serialized_pb='\n\rgeneral.proto\"6\n\x04Sign\x12\x0e\n\x06userid\x18\x01 \x01(\x03\x12\x10\n\x08signtype\x18\x02 \x01(\x05\x12\x0c\n\x04\x64\x61te\x18\x03 \x01(\t\"\x8e\x01\n\x04Mail\x12\x0e\n\x06userid\x18\x01 \x03(\x03\x12\r\n\x05title\x18\x02 \x01(\t\x12\x0f\n\x07\x63ontext\x18\x03 \x01(\t\x12\x0c\n\x04type\x18\x04 \x01(\x05\x12\x0e\n\x06\x61ttach\x18\x05 \x01(\t\x12\x12\n\nbuttontext\x18\x06 \x01(\t\x12\x11\n\thasattach\x18\x07 \x01(\x05\x12\x11\n\tgetattach\x18\x08 \x01(\x05')
 
 
 
@@ -69,8 +69,8 @@ _MAIL = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='userid', full_name='Mail.userid', index=0,
-      number=1, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
+      number=1, type=3, cpp_type=2, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -111,15 +111,15 @@ _MAIL = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='hasattach', full_name='Mail.hasattach', index=6,
-      number=7, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      number=7, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='getattach', full_name='Mail.getattach', index=7,
-      number=8, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      number=8, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),

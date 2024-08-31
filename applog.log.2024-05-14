@@ -1,0 +1,113 @@
+2024-05-13 12:30:33|ERROR|app.py:45|(2003, "Can't connect to MySQL server on '192.168.3.103:3306' (113)")
+Traceback (most recent call last):
+  File "app.py", line 43, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 103, in POST
+    result = Account.VerifyAccount(userid,password)
+  File "./Account.py", line 137, in VerifyAccount
+    result = Config.gdb.select("user_data" , what = "password", vars = dict(userid=userid), where="userid=$userid")
+  File "/usr/local/lib/python2.7/dist-packages/web/db.py", line 898, in select
+    return self.query(qout, processed=True)
+  File "/usr/local/lib/python2.7/dist-packages/web/db.py", line 844, in query
+    db_cursor = self._db_cursor()
+  File "/usr/local/lib/python2.7/dist-packages/web/db.py", line 750, in _db_cursor
+    return self.ctx.db.cursor()
+  File "/usr/local/lib/python2.7/dist-packages/web/db.py", line 690, in _getctx
+    self._load_context(self._ctx)
+  File "/usr/local/lib/python2.7/dist-packages/web/db.py", line 702, in _load_context
+    ctx.db = self._connect(self.keywords)
+  File "/usr/local/lib/python2.7/dist-packages/web/db.py", line 730, in _connect
+    return self.db_module.connect(**keywords)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 84, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/connections.py", line 179, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2003, "Can't connect to MySQL server on '192.168.3.103:3306' (113)")
+2024-05-13 12:35:13|ERROR|app.py:45|'total'
+Traceback (most recent call last):
+  File "app.py", line 43, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 54, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 144, in GET
+    tasklist = Task.GetTask(userid, version)
+  File "./Task.py", line 30, in GetTask
+    InitTaskCfg(userid , datestr)
+  File "./Task.py", line 14, in InitTaskCfg
+    taskinfo["total_"+ str(id)] = TaskCfg.TASK_CFG["total"]
+KeyError: 'total'
+2024-05-13 12:38:23|ERROR|app.py:45|unconverted data remains:  12:38:23.779838
+Traceback (most recent call last):
+  File "app.py", line 43, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 54, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 144, in GET
+    tasklist = Task.GetTask(userid, version)
+  File "./Task.py", line 53, in GetTask
+    datestr = Lobby.GetMonday(now)
+  File "./Lobby.py", line 33, in GetMonday
+    today = datetime.datetime.strptime(str(today), "%Y-%m-%d")
+  File "/usr/lib/python2.7/_strptime.py", line 335, in _strptime
+    data_string[found.end():])
+ValueError: unconverted data remains:  12:38:23.779838
+2024-05-13 12:40:08|ERROR|app.py:45|unconverted data remains:  12:40:08.874066
+Traceback (most recent call last):
+  File "app.py", line 43, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 54, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 144, in GET
+    tasklist = Task.GetTask(userid, version)
+  File "./Task.py", line 53, in GetTask
+    datestr = Lobby.GetMonday(now)
+  File "./Lobby.py", line 33, in GetMonday
+    today = datetime.datetime.strptime(str(today), "%Y-%m-%d")
+  File "/usr/lib/python2.7/_strptime.py", line 335, in _strptime
+    data_string[found.end():])
+ValueError: unconverted data remains:  12:40:08.874066
+2024-05-13 12:43:58|ERROR|app.py:45|unconverted data remains:  12:43:58.705827
+Traceback (most recent call last):
+  File "app.py", line 43, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 54, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 144, in GET
+    tasklist = Task.GetTask(userid, version)
+  File "./Task.py", line 53, in GetTask
+    datestr = Lobby.GetMonday(now)
+  File "./Lobby.py", line 33, in GetMonday
+    today = datetime.datetime.strptime(str(today), "%Y-%m-%d")
+  File "/usr/lib/python2.7/_strptime.py", line 335, in _strptime
+    data_string[found.end():])
+ValueError: unconverted data remains:  12:43:58.705827
+2024-05-13 12:48:15|ERROR|app.py:45|unconverted data remains:  12:48:15.521889
+Traceback (most recent call last):
+  File "app.py", line 43, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 54, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 144, in GET
+    tasklist = Task.GetTask(userid, version)
+  File "./Task.py", line 53, in GetTask
+    datestr = Lobby.GetMonday(now)
+  File "./Lobby.py", line 38, in GetMonday
+    today = datetime.datetime.strptime(str(today), "%Y-%m-%d")
+  File "/usr/lib/python2.7/_strptime.py", line 335, in _strptime
+    data_string[found.end():])
+ValueError: unconverted data remains:  12:48:15.521889
+2024-05-13 12:53:49|ERROR|app.py:45|time data '2024_05_13' does not match format '%Y-%m-%d'
+Traceback (most recent call last):
+  File "app.py", line 43, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 54, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 144, in GET
+    tasklist = Task.GetTask(userid, version)
+  File "./Task.py", line 53, in GetTask
+    datestr = Lobby.GetMonday(datestr)
+  File "./Lobby.py", line 33, in GetMonday
+    today = datetime.datetime.strptime(str(today), "%Y-%m-%d")
+  File "/usr/lib/python2.7/_strptime.py", line 332, in _strptime
+    (data_string, format))
+ValueError: time data '2024_05_13' does not match format '%Y-%m-%d'

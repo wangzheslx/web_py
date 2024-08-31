@@ -1,39 +1,102 @@
-2024-05-11 16:42:36|ERROR|app.py:43|'userid'
+2024-07-08 14:07:52|ERROR|app.py:57|invalid literal for int() with base 10: ''
 Traceback (most recent call last):
-  File "app.py", line 41, in wrapper
+  File "app.py", line 55, in wrapper
     return func(*args,**kwargs)
-  File "app.py", line 52, in wrapper
-    return func(*args,**kwargs)
-  File "app.py", line 131, in POST
-    dictInfo = Shop.ShopBuy(userid , propid , propnum, shopversion, version)
-  File "./Shop.py", line 79, in ShopBuy
-    PresentProp(userid, propid, propnum)
-  File "./Shop.py", line 83, in PresentProp
-    strkey = Config.KEY_PACKAGE.format(userid)
-KeyError: 'userid'
-2024-05-11 16:45:28|ERROR|app.py:43|'int' object has no attribute '__getitem__'
+  File "app.py", line 187, in POST
+    req.useridlist = map(int, req.useridlist.split(','))
+ValueError: invalid literal for int() with base 10: ''
+2024-07-08 14:33:28|ERROR|app.py:57|'str' object has no attribute 'items'
 Traceback (most recent call last):
-  File "app.py", line 41, in wrapper
+  File "app.py", line 55, in wrapper
     return func(*args,**kwargs)
-  File "app.py", line 52, in wrapper
+  File "app.py", line 66, in wrapper
     return func(*args,**kwargs)
-  File "app.py", line 131, in POST
-    dictInfo = Shop.ShopBuy(userid , propid , propnum, shopversion, version)
-  File "./Shop.py", line 79, in ShopBuy
-    PresentProp(userid, propid, propnum)
-  File "./Shop.py", line 88, in PresentProp
-    propid = "prop_"+ str(propid["id"])
-TypeError: 'int' object has no attribute '__getitem__'
-2024-05-11 16:47:19|ERROR|app.py:43|'id'
+  File "app.py", line 223, in POST
+    Lobby.GetMailAttach(userid, mailid)
+  File "./Lobby.py", line 122, in GetMailAttach
+    for propid, propnum in attach.items():
+AttributeError: 'str' object has no attribute 'items'
+2024-07-08 14:34:47|ERROR|app.py:57|10
 Traceback (most recent call last):
-  File "app.py", line 41, in wrapper
+  File "app.py", line 55, in wrapper
     return func(*args,**kwargs)
-  File "app.py", line 52, in wrapper
+  File "app.py", line 66, in wrapper
     return func(*args,**kwargs)
-  File "app.py", line 131, in POST
-    dictInfo = Shop.ShopBuy(userid , propid , propnum, shopversion, version)
-  File "./Shop.py", line 79, in ShopBuy
-    PresentProp(userid, propid, propnum)
-  File "./Shop.py", line 88, in PresentProp
-    propid = "prop_"+ str(propdic["id"])
-KeyError: 'id'
+  File "app.py", line 223, in POST
+    Lobby.GetMailAttach(userid, mailid)
+  File "./Lobby.py", line 123, in GetMailAttach
+    attachlist[propid] = attachlist[propnum]
+KeyError: 10
+2024-07-08 14:57:10|ERROR|app.py:57|global name 'propid' is not defined
+Traceback (most recent call last):
+  File "app.py", line 55, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 66, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 223, in POST
+    mailinfolist = Lobby.GetMailAttach(userid, mailid)
+  File "./Lobby.py", line 128, in GetMailAttach
+    Shop.Present(userid,propid,propnum)
+  File "./Shop.py", line 88, in Present
+    print(propid)
+NameError: global name 'propid' is not defined
+2024-07-08 15:16:46|ERROR|app.py:57|value is not an integer or out of range
+Traceback (most recent call last):
+  File "app.py", line 55, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 66, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 232, in POST
+    Lobby.MailDeleteALL(userid)
+  File "./Lobby.py", line 113, in MailDeleteALL
+    Config.grds.lrem(strKeyList, mailid, 0)
+  File "/home/slx/.local/lib/python2.7/site-packages/redis/client.py", line 1987, in lrem
+    return self.execute_command('LREM', name, count, value)
+  File "/home/slx/.local/lib/python2.7/site-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/home/slx/.local/lib/python2.7/site-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/home/slx/.local/lib/python2.7/site-packages/redis/connection.py", line 756, in read_response
+    raise response
+ResponseError: value is not an integer or out of range
+2024-07-08 15:20:45|ERROR|app.py:57|value is not an integer or out of range
+Traceback (most recent call last):
+  File "app.py", line 55, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 66, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 232, in POST
+    Lobby.MailDeleteALL(userid)
+  File "./Lobby.py", line 114, in MailDeleteALL
+    Config.grds.lrem(strKeyList, mailid, 0)
+  File "/home/slx/.local/lib/python2.7/site-packages/redis/client.py", line 1987, in lrem
+    return self.execute_command('LREM', name, count, value)
+  File "/home/slx/.local/lib/python2.7/site-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/home/slx/.local/lib/python2.7/site-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/home/slx/.local/lib/python2.7/site-packages/redis/connection.py", line 756, in read_response
+    raise response
+ResponseError: value is not an integer or out of range
+2024-07-08 15:26:12|ERROR|app.py:57|'hasattach'
+Traceback (most recent call last):
+  File "app.py", line 55, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 66, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 223, in POST
+    mailinfolist = Lobby.GetMailAttach(userid, mailid)
+  File "./Lobby.py", line 124, in GetMailAttach
+    print(result['hasattach'])
+KeyError: 'hasattach'
+2024-07-08 15:26:21|ERROR|app.py:57|'hasattach'
+Traceback (most recent call last):
+  File "app.py", line 55, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 66, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 223, in POST
+    mailinfolist = Lobby.GetMailAttach(userid, mailid)
+  File "./Lobby.py", line 124, in GetMailAttach
+    print(result['hasattach'])
+KeyError: 'hasattach'

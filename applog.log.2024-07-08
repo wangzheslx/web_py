@@ -1,0 +1,95 @@
+2024-07-07 14:55:55|ERROR|app.py:57|Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Traceback (most recent call last):
+  File "app.py", line 55, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 66, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 191, in POST
+    req.attach = json.loads(req.attach)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python2.7/json/decoder.py", line 380, in raw_decode
+    obj, end = self.scan_once(s, idx)
+ValueError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2024-07-07 15:01:35|ERROR|app.py:57|'long' object has no attribute 'append'
+Traceback (most recent call last):
+  File "app.py", line 55, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 66, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 193, in POST
+    Lobby.SendMail(req)
+  File "./Lobby.py", line 49, in SendMail
+    mailproto.userid.append(userid)
+AttributeError: 'long' object has no attribute 'append'
+2024-07-07 15:03:46|ERROR|app.py:57|'long' object has no attribute 'append'
+Traceback (most recent call last):
+  File "app.py", line 55, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 66, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 193, in POST
+    Lobby.SendMail(req)
+  File "./Lobby.py", line 49, in SendMail
+    mailproto.userid.append(int(userid))
+AttributeError: 'long' object has no attribute 'append'
+2024-07-07 15:04:59|ERROR|app.py:57|'long' object has no attribute 'append'
+Traceback (most recent call last):
+  File "app.py", line 55, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 66, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 193, in POST
+    Lobby.SendMail(req)
+  File "./Lobby.py", line 49, in SendMail
+    mailproto.userid.append(long(userid))
+AttributeError: 'long' object has no attribute 'append'
+2024-07-07 15:11:56|ERROR|app.py:57|'long' object has no attribute 'append'
+Traceback (most recent call last):
+  File "app.py", line 55, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 66, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 193, in POST
+    Lobby.SendMail(req)
+  File "./Lobby.py", line 49, in SendMail
+    mailproto.userid.append(userid)
+AttributeError: 'long' object has no attribute 'append'
+2024-07-07 15:13:28|ERROR|app.py:57|'long' object has no attribute 'append'
+Traceback (most recent call last):
+  File "app.py", line 55, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 195, in POST
+    Lobby.SendMail(req)
+  File "./Lobby.py", line 49, in SendMail
+    mailproto.userid.append(userid)
+AttributeError: 'long' object has no attribute 'append'
+2024-07-07 15:28:34|ERROR|app.py:57|u'1' has type unicode, but expected one of: int, long
+Traceback (most recent call last):
+  File "app.py", line 55, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 195, in POST
+    Lobby.SendMail(req)
+  File "./Lobby.py", line 52, in SendMail
+    mailproto.type = mailinfo['type']
+TypeError: u'1' has type unicode, but expected one of: int, long
+2024-07-07 15:32:09|ERROR|app.py:57|'Mail' object does not support item assignment
+Traceback (most recent call last):
+  File "app.py", line 55, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 195, in POST
+    Lobby.SendMail(req)
+  File "./Lobby.py", line 58, in SendMail
+    mailproto['getattach'] = 0
+TypeError: 'Mail' object does not support item assignment
+2024-07-07 15:33:49|ERROR|app.py:57|0 has type int, but expected one of: bytes, unicode
+Traceback (most recent call last):
+  File "app.py", line 55, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 195, in POST
+    Lobby.SendMail(req)
+  File "./Lobby.py", line 58, in SendMail
+    mailproto.getattach= 0
+TypeError: 0 has type int, but expected one of: bytes, unicode

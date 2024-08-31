@@ -1,0 +1,704 @@
+python: can't open file 'ActionMonitor.py': [Errno 2] No such file or directory
+python: can't open file 'ActionMonitor.py': [Errno 2] No such file or directory
+python: can't open file 'ActionMonitor.py': [Errno 2] No such file or directory
+python: can't open file 'ActionMonitor.py': [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 4, in <module>
+    import Config
+  File "/home/slx/py/uwsgi/Config.py", line 3, in <module>
+    import redis
+ImportError: No module named redis
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 4, in <module>
+    import Config
+  File "/home/slx/py/uwsgi/Config.py", line 3, in <module>
+    import redis
+ImportError: No module named redis
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 4, in <module>
+    import Config
+  File "/home/slx/py/uwsgi/Config.py", line 3, in <module>
+    import redis
+ImportError: No module named redis
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 4, in <module>
+    import Config
+  File "/home/slx/py/uwsgi/Config.py", line 3, in <module>
+    import redis
+ImportError: No module named redis
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 4, in <module>
+    import Config
+  File "/home/slx/py/uwsgi/Config.py", line 3, in <module>
+    import redis
+ImportError: No module named redis
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 4, in <module>
+    import Config
+  File "/home/slx/py/uwsgi/Config.py", line 3, in <module>
+    import redis
+ImportError: No module named redis
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 4, in <module>
+    import Config
+  File "/home/slx/py/uwsgi/Config.py", line 3, in <module>
+    import redis
+ImportError: No module named redis
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 4, in <module>
+    import Config
+  File "/home/slx/py/uwsgi/Config.py", line 3, in <module>
+    import redis
+ImportError: No module named redis
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "ActionMonitor.py", line 28, in <module>
+    ActionMonitor()
+  File "ActionMonitor.py", line 16, in ActionMonitor
+    res = Config.grds.blpop(strKey)[1]
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.

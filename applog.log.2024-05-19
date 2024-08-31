@@ -1,0 +1,44 @@
+2024-05-18 14:00:05|ERROR|app.py:46|cannot concatenate 'str' and 'int' objects
+Traceback (most recent call last):
+  File "app.py", line 44, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 55, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 156, in GET
+    result = Task.TaskReward(userid, taskid)
+  File "./Task.py", line 107, in TaskReward
+    rewardlist = json.loads(Config.grds.hget(strkey,'reward_'+taskid)) #######################################################
+TypeError: cannot concatenate 'str' and 'int' objects
+2024-05-18 14:00:55|ERROR|app.py:46|cannot concatenate 'str' and 'int' objects
+Traceback (most recent call last):
+  File "app.py", line 44, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 55, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 156, in GET
+    result = Task.TaskReward(userid, taskid)
+  File "./Task.py", line 107, in TaskReward
+    rewardlist = json.loads(Config.grds.hget(strkey,'reward_'+taskid))
+TypeError: cannot concatenate 'str' and 'int' objects
+2024-05-18 14:03:02|ERROR|app.py:46|cannot concatenate 'str' and 'int' objects
+Traceback (most recent call last):
+  File "app.py", line 44, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 55, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 156, in GET
+    result = Task.TaskReward(userid, taskid)
+  File "./Task.py", line 107, in TaskReward
+    rewardlist = json.loads(Config.grds.hget(str(strkey),'reward_'+taskid))
+TypeError: cannot concatenate 'str' and 'int' objects
+2024-05-18 14:04:11|ERROR|app.py:46|'list' object has no attribute 'items'
+Traceback (most recent call last):
+  File "app.py", line 44, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 55, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 156, in GET
+    result = Task.TaskReward(userid, taskid)
+  File "./Task.py", line 108, in TaskReward
+    for presentid, presentnum in rewardlist.items():
+AttributeError: 'list' object has no attribute 'items'

@@ -182,11 +182,9 @@ class Sign:
     
 class Mail_send:
     @CatchError
-    @CheckLogin
     def POST(self):
         req = web.input(useridlist = "", type = "", date = "", tile = "", context = "", attach = "", fromuserid = "", isglobal = "")
-        print(req)
-        # 有什么区别？
+        req.useridlist = map(int, req.useridlist.split(','))
         req.attach = json.loads(req.attach)
         print(req)
         Lobby.SendMail(req)
@@ -197,7 +195,7 @@ class Mail_send:
 class Mail_list:
     @CatchError
     @CheckLogin
-    def POST(self):
+    def GET(self):
         req = web.input(userid = "")
         userid = int(req.userid)
         mailinfolist = Lobby.GetMailList(userid)
@@ -216,7 +214,14 @@ class Mail_delete:
 
 
 class Mail_getattach:
-    pass
+    @CatchError
+    @CheckLogin
+    def POST(self):
+        req = web.input(userid = "", mailid = "")
+        userid = int(req.userid)
+        mailid = req.mailid
+        mailinfolist = Lobby.GetMailAttach(userid, mailid)
+        return json.dumps({'code': 0, 'mailinfolist':mailinfolist})
 
 class Mail_delete_all:
     @CatchError

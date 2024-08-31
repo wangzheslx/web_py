@@ -1,0 +1,22 @@
+2024-07-07 14:54:37|ERROR|app.py:57|invalid literal for int() with base 10: ''
+Traceback (most recent call last):
+  File "app.py", line 55, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 66, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 188, in POST
+    req.useridlist = map(int, req.useridlist.split(','))
+ValueError: invalid literal for int() with base 10: ''
+2024-07-07 14:59:35|ERROR|app.py:57|'userid'
+Traceback (most recent call last):
+  File "app.py", line 55, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 66, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 193, in POST
+    Lobby.SendMail(req)
+  File "./Lobby.py", line 49, in SendMail
+    mailinfo.userid.append(userid)
+  File "/usr/local/lib/python2.7/dist-packages/web/utils.py", line 111, in __getattr__
+    raise AttributeError(k)
+AttributeError: 'userid'

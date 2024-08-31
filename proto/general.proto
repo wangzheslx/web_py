@@ -7,12 +7,12 @@ message Sign{
 }
 
 message Mail{
-    optional int64 userid = 1;
+    repeated int64 userid = 1;
     optional string title = 2;
     optional string context = 3;
     optional int32 type = 4;
     optional string attach = 5;
     optional string buttontext = 6;
-    optional string hasattach = 7;
-    optional string getattach = 8;
+    optional int32 hasattach = 7;
+    optional int32 getattach = 8;
 }

@@ -85,9 +85,16 @@ def ShopBuy(userid , propid , propnum, shopversion, version):
 
 def Present(userid, presentid, presentnum):
     # 根据发送列表， 根据道具ID，调用对应的函数发送奖励
+    # print(userid)
+    # print("####")
+    # print(presentid)
+    # print("####")
+    # print(presentnum)
     if presentid in ShopCfg.SHOP_LIST:
+        # print("not money")
         PresentProp(userid, presentid, presentnum)
     elif presentid == Config.MONEY_ID:
+        # print("money")
         PresentMoney(userid, presentnum)
     
 

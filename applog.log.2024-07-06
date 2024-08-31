@@ -1,0 +1,69 @@
+2024-07-05 13:12:27|ERROR|app.py:48|(2003, "Can't connect to MySQL server on '192.168.193.136:3306' (110)")
+Traceback (most recent call last):
+  File "app.py", line 46, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 106, in POST
+    result = Account.VerifyAccount(userid,password)
+  File "./Account.py", line 171, in VerifyAccount
+    result = Config.gdb.select("user_data" , what = "password", vars = dict(userid=userid), where="userid=$userid")
+  File "/usr/local/lib/python2.7/dist-packages/web/db.py", line 898, in select
+    return self.query(qout, processed=True)
+  File "/usr/local/lib/python2.7/dist-packages/web/db.py", line 844, in query
+    db_cursor = self._db_cursor()
+  File "/usr/local/lib/python2.7/dist-packages/web/db.py", line 750, in _db_cursor
+    return self.ctx.db.cursor()
+  File "/usr/local/lib/python2.7/dist-packages/web/db.py", line 690, in _getctx
+    self._load_context(self._ctx)
+  File "/usr/local/lib/python2.7/dist-packages/web/db.py", line 702, in _load_context
+    ctx.db = self._connect(self.keywords)
+  File "/usr/local/lib/python2.7/dist-packages/web/db.py", line 730, in _connect
+    return self.db_module.connect(**keywords)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 84, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/connections.py", line 179, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2003, "Can't connect to MySQL server on '192.168.193.136:3306' (110)")
+2024-07-05 13:20:24|ERROR|app.py:48|'int' object is not callable
+Traceback (most recent call last):
+  File "app.py", line 46, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 57, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 171, in GET
+    Task.UserSign(userid, signtype, date)
+  File "./Task.py", line 123, in UserSign
+    day = date.day()
+TypeError: 'int' object is not callable
+2024-07-05 15:31:55|ERROR|app.py:48|'int' object is not callable
+Traceback (most recent call last):
+  File "app.py", line 46, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 57, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 171, in GET
+    Task.UserSign(userid, signtype, date)
+  File "./Task.py", line 128, in UserSign
+    day = date.day()
+TypeError: 'int' object is not callable
+2024-07-05 15:36:41|ERROR|app.py:48|'module' object has no attribute 'today'
+Traceback (most recent call last):
+  File "app.py", line 46, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 57, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 171, in GET
+    Task.UserSign(userid, signtype, date)
+  File "./Task.py", line 123, in UserSign
+    date = datetime.today()
+AttributeError: 'module' object has no attribute 'today'
+2024-07-05 15:37:24|ERROR|app.py:48|'int' object is not callable
+Traceback (most recent call last):
+  File "app.py", line 46, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 57, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 171, in GET
+    Task.UserSign(userid, signtype, date)
+  File "./Task.py", line 128, in UserSign
+    day = date.day()
+TypeError: 'int' object is not callable

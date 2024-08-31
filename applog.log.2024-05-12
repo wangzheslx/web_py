@@ -1,0 +1,39 @@
+2024-05-11 16:42:36|ERROR|app.py:43|'userid'
+Traceback (most recent call last):
+  File "app.py", line 41, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 52, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 131, in POST
+    dictInfo = Shop.ShopBuy(userid , propid , propnum, shopversion, version)
+  File "./Shop.py", line 79, in ShopBuy
+    PresentProp(userid, propid, propnum)
+  File "./Shop.py", line 83, in PresentProp
+    strkey = Config.KEY_PACKAGE.format(userid)
+KeyError: 'userid'
+2024-05-11 16:45:28|ERROR|app.py:43|'int' object has no attribute '__getitem__'
+Traceback (most recent call last):
+  File "app.py", line 41, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 52, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 131, in POST
+    dictInfo = Shop.ShopBuy(userid , propid , propnum, shopversion, version)
+  File "./Shop.py", line 79, in ShopBuy
+    PresentProp(userid, propid, propnum)
+  File "./Shop.py", line 88, in PresentProp
+    propid = "prop_"+ str(propid["id"])
+TypeError: 'int' object has no attribute '__getitem__'
+2024-05-11 16:47:19|ERROR|app.py:43|'id'
+Traceback (most recent call last):
+  File "app.py", line 41, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 52, in wrapper
+    return func(*args,**kwargs)
+  File "app.py", line 131, in POST
+    dictInfo = Shop.ShopBuy(userid , propid , propnum, shopversion, version)
+  File "./Shop.py", line 79, in ShopBuy
+    PresentProp(userid, propid, propnum)
+  File "./Shop.py", line 88, in PresentProp
+    propid = "prop_"+ str(propdic["id"])
+KeyError: 'id'
